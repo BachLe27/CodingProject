@@ -2,20 +2,21 @@ export class Lv1 extends Phaser.Scene {
    constructor() {
       super('Lv1');
    }
-   
+
    preload() {
       this.load.image("terrain-img", "./assets/Game/terrain.png");
       this.load.image("chest-img", "./assets/Game/chest.png");
-      this.load.tilemapTiledJSON("map", "./assets/Game/Lv1/Lv1.json");
       this.load.image("frame", "./assets/Game/frame.png");
-      this.load.json("questions", "./assets/Game/Lv1/questionLv1.json");
       this.load.image("key-img", "./assets/Game/key.png");
       this.load.image("btn", "./assets/Game/blue_button.png");
+      this.load.tilemapTiledJSON("map", "./assets/Game/Lv1/Lv1.json");
+      this.load.json("questions", "./assets/Game/Lv1/questionLv1.json");
+      this.load.image("game-bg", "./assets/Game/covid.jpg");
     }
 
    create() {
 
-      this.add.image(0, 0, 'bg').setOrigin(0,0);
+      this.add.image(800/2, 600/2, 'game-bg');
       this.loadX = 144;
       this.loadY = 140;
 
@@ -41,7 +42,7 @@ export class Lv1 extends Phaser.Scene {
       this.questionLayer = this.map.createLayer('chest', chest, this.loadX, this.loadY);
       this.keyLayer = this.map.createLayer('key', key, this.loadX, this.loadY);
 
-      this.player = this.physics.add.sprite(this.playerX, this.playerY, 'charactor');
+      this.player = this.physics.add.sprite(this.playerX, this.playerY, 'female');
       
       this.groundLayer.setCollisionByProperty({collides: true});
       this.questionLayer.setCollisionByProperty({collides: true});
@@ -134,7 +135,7 @@ export class Lv1 extends Phaser.Scene {
             btn.setInteractive({useHandCursor: true});
 
             btn.on("pointerup", () => {
-               this.scene.start("Story2");
+               this.scene.start("Story2", {score: this.score}, this);
             })
             
          } else {
@@ -192,11 +193,11 @@ export class Lv1 extends Phaser.Scene {
 
    loadContent() {
 
-      const questionFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
+      const questionFormat = { font: 'bold 15px Arial', fill: '#ffffff', align: 'left', 
          wordWrap: { width: 410, useAdvancedWrap: true } 
       }; // text format cho câu hỏi
 
-      const answerFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
+      const answerFormat = { font: 'bold 15px Arial', fill: '#ffffff', align: 'left', 
          wordWrap: { width: 200, useAdvancedWrap: true } 
       }; // text format cho câu trả lời
 
@@ -263,7 +264,7 @@ export class Lv1 extends Phaser.Scene {
       
       // Đổi trạng thái của chest
       let chest = this.getTileNearPlayer(this.questionLayer);
-      console.log(chest);
+      // console.log(chest);
 
       if (isCorrect) {
          this.questionLayer.replaceByIndex(chest.index, 1035, chest.x, chest.y, 1, 1);

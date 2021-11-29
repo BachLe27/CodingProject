@@ -6,22 +6,23 @@ export class MainMenu extends Phaser.Scene {
 
    preload() {
       this.load.image('logo', 'assets/MainMenu/image/logo.png');
-      this.load.image('play-btn', 'assets/MainMenu/image/play-img.png');
+      this.load.image('play-btn', 'assets/MainMenu/image/play-btn.png');
       this.load.image('choose', 'assets/MainMenu/image/arrow.png');
-      this.load.image("bg", "./assets/Game/bg.jpg");
+      this.load.image("bg", "./assets/MainMenu/image/covid.jpg");
    }
 
    create() {
-      this.add.image(0, 0, 'bg').setOrigin(0,0);
-      const logo = this.add.image(170, 100, 'logo');
-      logo.setOrigin(0, 0);
-      logo.setScale(2);
+      this.add.image(800/2, 600/2, 'bg');
 
-      const playBtn = this.add.image(270, 400, 'play-btn');
+      // const logo = this.add.image(30, 100, 'logo');
+      // logo.setOrigin(0, 0);
+      // logo.setScale(2);
+
+      const playBtn = this.add.image(280, 450, 'play-btn').setScale(0.2);
       playBtn.setOrigin(0, 0);
-      playBtn.setInteractive();
+      playBtn.setInteractive({useHandCursor: true});
 
-      const choose = this.add.image(190, 440, 'choose');
+      const choose = this.add.image(210, 450, 'choose');
       choose.setOrigin(0, 0);
       choose.setVisible(false);
       

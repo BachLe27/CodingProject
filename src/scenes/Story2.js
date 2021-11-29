@@ -4,6 +4,11 @@ export class Story2 extends Phaser.Scene {
       super('Story2');
    }
 
+   init(data) {
+      //  console.log(data);
+       this.score = data.score;
+   }
+
    preload() {
       
    }
@@ -18,11 +23,11 @@ export class Story2 extends Phaser.Scene {
    
    update() {
       if (this.spacebar.isDown) {
-         this.scene.start("Lv2");
+         this.scene.start("Lv2", {score: this.score}, this);
       }
 
       this.input.on('pointerup', function() {
-         this.scene.start("Lv2");
+         this.scene.start("Lv2", {score: this.score}, this);
       }, this)
    }
 }

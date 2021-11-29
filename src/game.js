@@ -20,6 +20,7 @@ var config = {
    backgroundColor: 0x272822,
    scene: [MainMenu, Story, LoadScene, Lv1, Story2, Lv2, Story3, Lv3, Story4, Lv4, End],
    // scene: [LoadScene, Lv2],
+   // scene: [Story4, Lv4, End],
    pixelArt: true,
 
    physics: {

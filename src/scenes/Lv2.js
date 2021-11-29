@@ -3,15 +3,19 @@ export class Lv2 extends Phaser.Scene {
       super('Lv2');
    }
    
+   init(data) {
+      //  console.log(data);
+       this.score = data.score;
+   }
+
    preload() {
       this.load.tilemapTiledJSON("map2", "./assets/Game/Lv2/Lv2.json");
       this.load.json("questions2", "./assets/Game/Lv2/questionLv2.json");
-      this.load.image("btn", "./assets/Game/blue_button.png")
     }
 
-    create() {
+   create() {
 
-      this.add.image(0, 0, 'bg').setOrigin(0,0);
+      this.add.image(0, 0, 'game-bg');
       this.loadX = 144;
       this.loadY = 140;
 
@@ -21,7 +25,6 @@ export class Lv2 extends Phaser.Scene {
       this.questionFrameX = this.loadX + 20;
       this.questionFrameY = this.loadY - 120;
       
-      this.score = 0;
       this.bonusScore = 100;
 
       this.scoreText = this.add.text(this.loadX, this.loadY +  10 * 32 + 5, "Điểm: " + this.score, {
@@ -37,7 +40,7 @@ export class Lv2 extends Phaser.Scene {
       this.questionLayer = this.map.createLayer('chest', chest, this.loadX, this.loadY);
       this.keyLayer = this.map.createLayer('key', key, this.loadX, this.loadY);
 
-      this.player = this.physics.add.sprite(this.playerX, this.playerY, 'charactor');
+      this.player = this.physics.add.sprite(this.playerX, this.playerY, 'female');
       
       this.groundLayer.setCollisionByProperty({collides: true});
       this.questionLayer.setCollisionByProperty({collides: true});
@@ -108,7 +111,6 @@ export class Lv2 extends Phaser.Scene {
    loadQuestion() {
       
       let chest = this.getTileNearPlayer(this.questionLayer);
-      console.log(chest.index);
       // console.log(chest.index);
       if (chest != undefined && (chest.index == 1047 || chest.index == 1037) ) {
          if (this.haveKey) {
@@ -131,7 +133,7 @@ export class Lv2 extends Phaser.Scene {
             btn.setInteractive({useHandCursor: true});
 
             btn.on("pointerup", () => {
-               this.scene.start("Story3");
+               this.scene.start("Story3", {score: this.score}, this)
             })
             
          } else {
