@@ -16,7 +16,7 @@ export class Lv4 extends Phaser.Scene {
 
     create() {
 
-      this.add.image(0, 0, 'game-bg');
+      this.add.image(800/2, 600/2, 'game-bg');
       this.loadX = 144;
       this.loadY = 140;
 
