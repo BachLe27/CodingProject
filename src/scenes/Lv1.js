@@ -4,19 +4,14 @@ export class Lv1 extends Phaser.Scene {
    }
 
    preload() {
-      this.load.image("terrain-img", "./assets/Game/terrain.png");
-      this.load.image("chest-img", "./assets/Game/chest.png");
-      this.load.image("frame", "./assets/Game/frame.png");
-      this.load.image("key-img", "./assets/Game/key.png");
-      this.load.image("btn", "./assets/Game/blue_button.png");
       this.load.tilemapTiledJSON("map", "./assets/Game/Lv1/Lv1.json");
       this.load.json("questions", "./assets/Game/Lv1/questionLv1.json");
-      this.load.image("game-bg", "./assets/Game/covid.jpg");
     }
 
    create() {
 
-      this.add.image(800/2, 600/2, 'game-bg');
+      this.add.image(800/2, 600/2, 'game-bg').setCrop(0, 20, 800, 500);
+
       this.loadX = 144;
       this.loadY = 140;
 
@@ -29,8 +24,9 @@ export class Lv1 extends Phaser.Scene {
       this.score = 0;
       this.bonusScore = 100;
 
-      this.scoreText = this.add.text(this.loadX, this.loadY +  10 * 32 + 5, "Điểm: " + this.score, {
-         font: 'bold 25px Arial', fill: 'white'
+      this.scoreText = this.add.text(this.loadX, this.loadY + 10 * 32 + 5, "Điểm: " + this.score, {
+         font: 'bold 25px Arial', fill: 'white',
+         stroke: "#000000", strokeThickness: 4,
       })
 
       this.map = this.add.tilemap('map');
@@ -128,11 +124,13 @@ export class Lv1 extends Phaser.Scene {
             const noti = "Bạn đã tìm được vaccine chống virus";
             const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti, notiFormat);
 
+            this.sound.play('win');
             const btn = this.add.image(470, 355, 'btn').setScale(0.6).setOrigin(0, 0);
-            const btnText = this.add.text(495, 360, 'Tiếp tục', {
-               font: 'bold 16px Arial', align: 'center'
+            const btnText = this.add.text(495, 356, 'Tiếp tục', {
+               font: 'bold 16px Arial', align: 'center',
+               stroke: "#000000", strokeThickness: 4,
             });
-            btn.setInteractive({useHandCursor: true});
+            btn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
 
             btn.on("pointerup", () => {
                this.scene.start("Story2", {score: this.score}, this);
@@ -149,7 +147,6 @@ export class Lv1 extends Phaser.Scene {
 
             this.tweens.add({
                targets: this.notiText, 
-               
                duration: 200,
                onComplete: function(){
                   notiText.destroy();
@@ -179,11 +176,12 @@ export class Lv1 extends Phaser.Scene {
          let Y = (i < 2 ? answerFrameY[0]: answerFrameY[1]);
 
          let frame =  this.add.image(X, Y, 'frame').setScale(0.6).setOrigin(0, 0);
-         frame.setInteractive({useHandCursor: true});
+         frame.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
 
          frame.on("pointerover", () => {
             frame.setTint(0xff0000);
          });
+
          frame.on("pointerout", () => {
             frame.clearTint();
          });
@@ -194,10 +192,12 @@ export class Lv1 extends Phaser.Scene {
    loadContent() {
 
       const questionFormat = { font: 'bold 15px Arial', fill: '#ffffff', align: 'left', 
+         stroke: "#000000", strokeThickness: 4,
          wordWrap: { width: 410, useAdvancedWrap: true } 
       }; // text format cho câu hỏi
 
-      const answerFormat = { font: 'bold 15px Arial', fill: '#ffffff', align: 'left', 
+      const answerFormat = { font: 'bold 15px Arial', fill: '#ffffff', align: 'left', stroke: "#000000",
+         stroke: "#000000", strokeThickness: 4,
          wordWrap: { width: 200, useAdvancedWrap: true } 
       }; // text format cho câu trả lời
 
@@ -270,8 +270,10 @@ export class Lv1 extends Phaser.Scene {
          this.questionLayer.replaceByIndex(chest.index, 1035, chest.x, chest.y, 1, 1);
          chest.properties.collides = false;
          this.questionLayer.setCollisionByProperty({collides: false}, false);
+         this.sound.play('play');
       } else {
          this.questionLayer.replaceByIndex(chest.index, 1025, chest.x, chest.y, 1, 1);
+         this.sound.play('wrong');
       }
    }
 

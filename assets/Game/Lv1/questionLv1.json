@@ -1,48 +1,48 @@
 {
    "questions": [
       {
-         "content": "Ai là người sáng tạo ra ngôn ngữ Java ?",
+         "content": "Một trong những món đồ không thể thiếu khi ra đường thời covid?",
          "answers" : [
             {
-               "content": "James Gosling", 
-               "isCorrect" : true
+               "content": "Mũ", 
+               "isCorrect" : false
             }, 
             {
-               "content": "Mark Zuckerberg", 
+               "content": "Khăn quàng cổ", 
                "isCorrect" : false
             },
 
             {
-               "content": "Steve Jobs", 
-               "isCorrect" : false
+               "content": "Khẩu trang", 
+               "isCorrect" : true
             },
 
             {
-               "content": "Obama", 
+               "content": "Kính râm", 
                "isCorrect" : false
             }
          ]
       }, 
 
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
+         "content": "Bộ y tế có đưa ra quy tắc gì để phòng chống dịch covid?",
          "answers" : [
             {
-               "content": "Khuất Mạnh Hoàng", 
+               "content": "24k", 
                "isCorrect" : false
             }, 
             {
-               "content": "Lê Thanh Bình", 
+               "content": "3k", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "5k", 
                "isCorrect" : true
             },
 
             {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
+               "content": "4k", 
                "isCorrect" : false
             }
          ]  
@@ -73,47 +73,47 @@
       },
 
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
+         "content": "Virus corona bắt nguồn từ quốc gia nào?",
          "answers" : [
             {
-               "content": "Khuất Mạnh Hoàng", 
+               "content": "Việt Nam", 
                "isCorrect" : false
             }, 
             {
-               "content": "Lê Thanh Bình", 
+               "content": "Hàn Quốc", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Ấn Độ", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Trung Quốc", 
                "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
             }
          ]  
       },
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
+         "content": "Cóc Vàng kì SUMMER 2021 đã gọi tên thành viên nào trong CLB JS?",
          "answers" : [
             {
-               "content": "Khuất Mạnh Hoàng", 
+               "content": "Hoàng Mạnh Khuất", 
                "isCorrect" : false
             }, 
             {
                "content": "Lê Thanh Bình", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
                "isCorrect" : false
             },
 
             {
-               "content": "Vũ Hải Lâm", 
+               "content": "Cao Quốc Dũng", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Phạm Bằng Hữu", 
                "isCorrect" : false
             }
          ]  

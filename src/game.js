@@ -2,7 +2,10 @@
 /** @type {import("./types/matter")} */
 
 import { MainMenu } from "./scenes/MainMenu.js";
+import { Gui } from "./scenes/Gui.js";
 import { LoadScene } from "./scenes/LoadScene.js";
+import { LastScene } from "./scenes/LastScene.js";
+import { HighScore } from "./scenes/HighScore.js";
 import { Story } from "./scenes/Story.js";
 import { Story2 } from "./scenes/Story2.js";
 import { Story3 } from "./scenes/Story3.js";
@@ -18,7 +21,7 @@ var config = {
    width: 800,
    height: 600,
    backgroundColor: 0x272822,
-   scene: [MainMenu, Story, LoadScene, Lv1, Story2, Lv2, Story3, Lv3, Story4, Lv4, End],
+   scene: [MainMenu, Gui, Story, LoadScene, Lv1, Story2, Lv2, Story3, Lv3, Story4, Lv4, End, LastScene, HighScore],
    // scene: [LoadScene, Lv2],
    // scene: [Story4, Lv4, End],
    pixelArt: true,

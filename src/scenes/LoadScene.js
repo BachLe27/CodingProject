@@ -5,19 +5,31 @@ export class LoadScene extends Phaser.Scene {
    }
 
    preload() {
+      this.load.image("terrain-img", "./assets/Game/terrain.png");
+      this.load.image("chest-img", "./assets/Game/chest.png");
+      this.load.image("frame", "./assets/Game/frame.png");
+      this.load.image("key-img", "./assets/Game/key.png");
+      this.load.image("btn", "./assets/Game/blue_button.png");
+      this.load.image("game-bg", "./assets/Game/covid.jpg");
+
+      this.load.audio('wrong', "./assets/Game/audio/wrong.mp3");
+      this.load.audio('win', "./assets/Game/audio/win.wav");
+
       this.load.spritesheet('female', "assets/Charactor/female.png", {
          frameWidth: 32,
          frameHeight: 32
       });
       
-
       this.load.spritesheet('male', "assets/Charactor/male.png", {
          frameWidth: 32,
          frameHeight: 32
       });
+
+      
    }
 
    create() {
+
       this.anims.create({
          key: "down", 
          frames: this.anims.generateFrameNumbers("female", {frames: [0, 1, 2]}),
