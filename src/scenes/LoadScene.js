@@ -14,6 +14,7 @@ export class LoadScene extends Phaser.Scene {
 
       this.load.audio('wrong', "./assets/Game/audio/wrong.mp3");
       this.load.audio('win', "./assets/Game/audio/win.wav");
+      this.load.audio('key', "./assets/Game/audio/key.wav");
 
       this.load.spritesheet('female', "assets/Charactor/female.png", {
          frameWidth: 32,

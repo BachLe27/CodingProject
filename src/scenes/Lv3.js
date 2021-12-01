@@ -5,7 +5,7 @@ export class Lv3 extends Phaser.Scene {
 
    init(data) {
       //  console.log(data);
-       this.score = data.score;
+       this.score = data.score || 0;
    }
    
    preload() {
@@ -15,12 +15,12 @@ export class Lv3 extends Phaser.Scene {
 
     create() {
 
-      this.add.image(800/2, 600/2, 'game-bg');
-      this.loadX = 144;
+      this.add.image(800/2, 600/2, 'game-bg').setCrop(0, 20, 800, 500);
+      this.loadX = 80;
       this.loadY = 140;
 
-      this.playerX = this.loadX + 48;
-      this.playerY = this.loadY + 48;
+      this.playerX = this.loadX + 48 + 10;
+      this.playerY = this.loadY + 48 + 10;
 
       this.questionFrameX = this.loadX + 20;
       this.questionFrameY = this.loadY - 120;
@@ -28,7 +28,8 @@ export class Lv3 extends Phaser.Scene {
       this.bonusScore = 100;
 
       this.scoreText = this.add.text(this.loadX, this.loadY +  10 * 32 + 5, "Điểm: " + this.score, {
-         font: 'bold 25px Arial', fill: 'white'
+         font: 'bold 25px Arial', fill: 'white',
+         stroke: "#000000", strokeThickness: 4,
       })
 
       this.map = this.add.tilemap('map3');
@@ -40,13 +41,17 @@ export class Lv3 extends Phaser.Scene {
       this.questionLayer = this.map.createLayer('chest', chest, this.loadX, this.loadY);
       this.keyLayer = this.map.createLayer('key', key, this.loadX, this.loadY);
 
-      this.player = this.physics.add.sprite(this.playerX, this.playerY, 'male');
+      this.girl = this.physics.add.sprite(this.playerX , this.playerY, 'female');
+      this.player = this.physics.add.sprite(this.playerX + 10, this.playerY + 10, 'male');
       
       this.groundLayer.setCollisionByProperty({collides: true});
       this.questionLayer.setCollisionByProperty({collides: true});
       this.keyLayer.setCollisionByProperty({collides: true});
 
       this.physics.add.collider(this.player, this.groundLayer);
+      this.physics.add.collider(this.girl, this.questionLayer);
+      this.physics.add.collider(this.girl, this.groundLayer);
+      this.physics.add.collider(this.girl, this.keyLayer);
 
       this.physics.add.collider(
          this.player, this.keyLayer, () => this.getKey(),
@@ -125,13 +130,15 @@ export class Lv3 extends Phaser.Scene {
             const frame = this.add.image(800 / 2, 600 / 2, 'frame');
 
             const noti = "Người tạo ra virus là:";
+            this.sound.play('win');
             const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti, notiFormat);
 
             const btn = this.add.image(470, 355, 'btn').setScale(0.6).setOrigin(0, 0);
             const btnText = this.add.text(495, 360, 'Tiếp tục', {
-               font: 'bold 16px Arial', align: 'center'
+               font: 'bold 16px Arial', align: 'center',
+               stroke: "#000000", strokeThickness: 4,
             });
-            btn.setInteractive({useHandCursor: true});
+            btn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
 
             btn.on("pointerup", () => {
                this.scene.start("Story4", {score: this.score}, this);
@@ -178,7 +185,7 @@ export class Lv3 extends Phaser.Scene {
          let Y = (i < 2 ? answerFrameY[0]: answerFrameY[1]);
 
          let frame =  this.add.image(X, Y, 'frame').setScale(0.6).setOrigin(0, 0);
-         frame.setInteractive({useHandCursor: true});
+         frame.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
 
          frame.on("pointerover", () => {
             frame.setTint(0xff0000);
@@ -192,11 +199,13 @@ export class Lv3 extends Phaser.Scene {
 
    loadContent() {
 
-      const questionFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
+      const questionFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left',
+         stroke: "#000000", strokeThickness: 4,
          wordWrap: { width: 410, useAdvancedWrap: true } 
       }; // text format cho câu hỏi
 
-      const answerFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
+      const answerFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left',
+         stroke: "#000000", strokeThickness: 4, 
          wordWrap: { width: 200, useAdvancedWrap: true } 
       }; // text format cho câu trả lời
 
@@ -256,9 +265,11 @@ export class Lv3 extends Phaser.Scene {
          this.score += this.bonusScore;
          this.scoreText.text = "Điểm: " + this.score;
          if (this.bonusScore == 0) this.bonusScore = 100;
+         this.sound.play('play');
       } else {
          if (this.bonusScore == 50) this.bonusScore = 0;
          if (this.bonusScore == 100) this.bonusScore = 50;
+         this.sound.play('wrong');
       }
       
       // Đổi trạng thái của chest
@@ -288,19 +299,74 @@ export class Lv3 extends Phaser.Scene {
       const speed = 120;
       if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
          this.player.play("m-up");
+
          y -= speed;
+
+         this.tweens.add({
+            targets: this.girl,
+            duration: 500,
+            y: this.player.y,
+            onStart: function() {
+               this.girl.play("up");
+            },
+            onCompleteScope: this,
+            onStartScope: this,
+         })
       }
       if ( (this.cursors["down"].isDown || this.cursors["s"].isDown) && this.player.active) {
          this.player.play("m-down");
+
          y += speed; 
+
+         this.tweens.add({
+            targets: this.girl,
+            duration: 500,
+            y: this.player.y,
+            onStart: function() {
+               this.girl.play("down");
+            },
+            onCompleteScope: this,
+            onStartScope: this,
+         })
+
       }
       if ( (this.cursors["right"].isDown || this.cursors["d"].isDown) && this.player.active) {
          this.player.play("m-right");
+
          x += speed;
+
+         this.tweens.add({
+            targets: this.girl,
+            duration: 500,
+            x: this.player.x,
+            // onStart: function() {
+            //    this.girl.setVelocity(x, y);
+            // },
+            onStart: function() {
+               this.girl.play("right");
+            },
+            onCompleteScope: this,
+            onStartScope: this,
+         })
       }
       if ( (this.cursors["left"].isDown || this.cursors["a"].isDown) && this.player.active) {
          this.player.play("m-left");
+
          x -= speed;
+
+         this.tweens.add({
+            targets: this.girl,
+            duration: 500,
+            x: this.player.x,
+            // onStart: function() {
+            //    this.girl.setVelocity(x, y);
+            // },
+            onComplete: function() {
+               this.girl.play("left");
+            },
+            onCompleteScope: this,
+            onStartScope: this,
+         })
       }
       this.player.setVelocity(x, y);
    }

@@ -5,7 +5,7 @@ export class Lv2 extends Phaser.Scene {
    
    init(data) {
       //  console.log(data);
-       this.score = data.score;
+       this.score = data.score || 0;
    }
 
    preload() {
@@ -15,7 +15,7 @@ export class Lv2 extends Phaser.Scene {
 
    create() {
 
-      this.add.image(800/2, 600/2, 'game-bg');
+      this.add.image(800/2, 600/2, 'game-bg').setCrop(0, 20, 800, 500);
       this.loadX = 144;
       this.loadY = 140;
 

@@ -5,7 +5,7 @@ export class Lv4 extends Phaser.Scene {
    
    init(data) {
       //  console.log(data);
-       this.score = data.score;
+       this.score = data.score || 0;
    }
 
 

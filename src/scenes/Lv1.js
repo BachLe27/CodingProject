@@ -279,7 +279,7 @@ export class Lv1 extends Phaser.Scene {
 
    getKey() {
       this.haveKey = true;
-
+      this.sound.play('key');
       let key = this.getTileNearPlayer(this.keyLayer);
       
       key.visible = false;
@@ -287,8 +287,6 @@ export class Lv1 extends Phaser.Scene {
       this.keyLayer.setCollisionByProperty({collides: false}, false);
 
    }
-
-    
 
    update() {
       // movement
