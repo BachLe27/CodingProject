@@ -288,6 +288,7 @@ export class Lv3 extends Phaser.Scene {
    getKey() {
       this.haveKey = true;
       let key = this.getTileNearPlayer(this.keyLayer);
+      this.sound.play('key');
       key.visible = false;
       key.properties.collides = false;
       this.keyLayer.setCollisionByProperty({collides: false}, false);
