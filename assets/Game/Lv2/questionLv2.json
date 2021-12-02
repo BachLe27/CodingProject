@@ -1,147 +1,109 @@
 {
    "questions": [
       {
-         "content": "Cóc vàng của kì Summer 2021 của CLB JS tên là?",
-         "answers" : [
+         "content": "Phần mềm EOS được viết bằng ngôn ngữ nào?",
+         "answers": [
             {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Hoàng Mạnh Khuất", 
-               "isCorrect" : false
+               "content": "C++",
+               "isCorrect": false
             },
-
             {
-               "content": "Cao Quốc Dũng", 
-               "isCorrect" : true
+               "content": "Java",
+               "isCorrect": false
             },
-
             {
-               "content": "Phạm Bằng Hữu", 
-               "isCorrect" : false
+               "content": "C#",
+               "isCorrect": true
+            },
+            {
+               "content": "Python",
+               "isCorrect": false
             }
          ]
-      }, 
-
-      {
-         "content": "Ai là người đang cầm đầu CLB JS?",
-         "answers" : [
-            {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-
-      {
-         "content": "Năm 2021 là năm hoạt động thứ mấy của CLB JS?",
-         "answers" : [
-            {
-               "content": "6", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "7", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "9", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "10", 
-               "isCorrect" : true
-            }
-         ]  
-      },
-
-      {
-         "content": "Ai là người đang cầm đầu CLB JS?",
-         "answers" : [
-            {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
-            }
-         ]  
       },
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
-         "answers" : [
+         "content": "Tên của hành tinh quê hương của Superman là gì?",
+         "answers": [
             {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
+               "content": "Argon",
+               "isCorrect": false
             },
-
             {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
+               "content": "Krypton",
+               "isCorrect": true
             },
-
             {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
+               "content": "Rann",
+               "isCorrect": false
+            },
+            {
+               "content": "Qward",
+               "isCorrect": false
             }
-         ]  
+         ]
       },
-
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
-         "answers" : [
+         "content": "Khi đăng kí vào CLB JS cần trải qua mấy vòng phỏng vấn?",
+         "answers": [
             {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
+               "content": "1",
+               "isCorrect": false
             },
-
             {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
+               "content": "2",
+               "isCorrect": false
             },
-
             {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
+               "content": "4",
+               "isCorrect": false
+            },
+            {
+               "content": "3",
+               "isCorrect": true
             }
-         ]  
+         ]
+      },
+      {
+         "content": "Covid đợt 4 bắt đầu vào tháng mấy?",
+         "answers": [
+            {
+               "content": "1",
+               "isCorrect": false
+            },
+            {
+               "content": "4",
+               "isCorrect": true
+            },
+            {
+               "content": "3",
+               "isCorrect": false
+            },
+            {
+               "content": "2",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "JS là câu lạc bộ về gì?",
+         "answers": [
+            {
+               "content": "Múa",
+               "isCorrect": false
+            },
+            {
+               "content": "Học thuật",
+               "isCorrect": true
+            },
+            {
+               "content": "Gym",
+               "isCorrect": false
+            },
+            {
+               "content": "Nhậu",
+               "isCorrect": false
+            }
+         ]
       }
-
    ]
 }
