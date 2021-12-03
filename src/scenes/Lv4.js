@@ -28,8 +28,9 @@ export class Lv4 extends Phaser.Scene {
       
       this.bonusScore = 100;
 
-      this.scoreText = this.add.text(this.loadX, this.loadY +  10 * 32 + 5, "Điểm: " + this.score, {
-         font: 'bold 25px Arial', fill: 'white'
+      this.scoreText = this.add.text(this.loadX, this.loadY +  13 * 32 + 5, "Điểm: " + this.score, {
+         font: 'bold 25px Arial', fill: 'white',
+         stroke: "#000000", strokeThickness: 4
       })
 
       this.map = this.add.tilemap('map4');
@@ -195,11 +196,13 @@ export class Lv4 extends Phaser.Scene {
    loadContent() {
 
       const questionFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
-         wordWrap: { width: 410, useAdvancedWrap: true } 
+         wordWrap: { width: 410, useAdvancedWrap: true },
+         stroke: "#000000", strokeThickness: 4
       }; // text format cho câu hỏi
 
       const answerFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
-         wordWrap: { width: 200, useAdvancedWrap: true } 
+         wordWrap: { width: 200, useAdvancedWrap: true },
+         stroke: "#000000", strokeThickness: 4,
       }; // text format cho câu trả lời
 
       // Question content

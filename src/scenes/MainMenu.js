@@ -54,7 +54,7 @@ export class MainMenu extends Phaser.Scene {
       // click and release
       playBtn.on("pointerup", () => {
          this.sound.play("play");
-         this.scene.start("Story");
+         this.scene.start("Story1");
       })
       
       // hoverring

@@ -22,7 +22,7 @@ export class Lv3 extends Phaser.Scene {
       this.playerX = this.loadX + 48 + 10;
       this.playerY = this.loadY + 48 + 10;
 
-      this.questionFrameX = this.loadX + 20;
+      this.questionFrameX = this.loadX + 80;
       this.questionFrameY = this.loadY - 120;
       
       this.bonusScore = 100;

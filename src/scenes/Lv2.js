@@ -16,19 +16,20 @@ export class Lv2 extends Phaser.Scene {
    create() {
 
       this.add.image(800/2, 600/2, 'game-bg').setCrop(0, 20, 800, 500);
-      this.loadX = 144;
-      this.loadY = 140;
+      this.loadX = 80;
+      this.loadY = 110;
 
       this.playerX = this.loadX + 48;
       this.playerY = this.loadY + 48;
 
-      this.questionFrameX = this.loadX + 20;
-      this.questionFrameY = this.loadY - 120;
+      this.questionFrameX = this.loadX + 80;
+      this.questionFrameY = this.loadY - 80;
       
       this.bonusScore = 100;
 
-      this.scoreText = this.add.text(this.loadX, this.loadY +  10 * 32 + 5, "Điểm: " + this.score, {
-         font: 'bold 25px Arial', fill: 'white'
+      this.scoreText = this.add.text(this.loadX, this.loadY +  12 * 32 + 5, "Điểm: " + this.score, {
+         font: 'bold 25px Arial', fill: 'white',
+         stroke: "#000000", strokeThickness: 4
       })
 
       this.map = this.add.tilemap('map2');
@@ -196,11 +197,13 @@ export class Lv2 extends Phaser.Scene {
    loadContent() {
 
       const questionFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
-         wordWrap: { width: 410, useAdvancedWrap: true } 
+         wordWrap: { width: 410, useAdvancedWrap: true },
+         stroke: "#000000", strokeThickness: 4
       }; // text format cho câu hỏi
 
       const answerFormat = { font: 'bold 15px Arial', fill: 'white', align: 'left', 
-         wordWrap: { width: 200, useAdvancedWrap: true } 
+         wordWrap: { width: 200, useAdvancedWrap: true },
+         stroke: "#000000", strokeThickness: 4
       }; // text format cho câu trả lời
 
       // Question content
@@ -268,7 +271,7 @@ export class Lv2 extends Phaser.Scene {
       
       // Đổi trạng thái của chest
       let chest = this.getTileNearPlayer(this.questionLayer);
-      console.log(chest);
+      // console.log(chest);
 
       if (isCorrect) {
          this.questionLayer.replaceByIndex(chest.index, 1035, chest.x, chest.y, 1, 1);
