@@ -90,6 +90,6 @@ export class LoadScene extends Phaser.Scene {
    }
    
    update() {
-      this.scene.start('Lv1');
+      this.scene.start('Lv3');
    }
 }

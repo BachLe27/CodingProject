@@ -16,15 +16,15 @@ export class Lv4 extends Phaser.Scene {
 
     create() {
 
-      this.add.image(800/2, 600/2, 'game-bg');
+      this.add.image(800/2, 600/2, 'game-bg').setCrop(0, 20, 800, 500);
       this.loadX = 80;
       this.loadY = 100;
 
       this.playerX = this.loadX + 48;
       this.playerY = this.loadY + 48;
 
-      this.questionFrameX = this.loadX + 20;
-      this.questionFrameY = this.loadY - 120;
+      this.questionFrameX = this.loadX + 90;
+      this.questionFrameY = this.loadY - 80;
       
       this.bonusScore = 100;
 
@@ -126,6 +126,7 @@ export class Lv4 extends Phaser.Scene {
             const frame = this.add.image(800 / 2, 600 / 2, 'frame');
 
             const noti = "Người tạo ra virus là:";
+            this.sound.play('win');
             const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti, notiFormat);
 
             const btn = this.add.image(470, 355, 'btn').setScale(0.6).setOrigin(0, 0);
@@ -257,9 +258,11 @@ export class Lv4 extends Phaser.Scene {
          this.score += this.bonusScore;
          this.scoreText.text = "Điểm: " + this.score;
          if (this.bonusScore == 0) this.bonusScore = 100;
+         this.sound.play('play');
       } else {
          if (this.bonusScore == 50) this.bonusScore = 0;
          if (this.bonusScore == 100) this.bonusScore = 50;
+         this.sound.play('wrong');
       }
       
       // Đổi trạng thái của chest
@@ -278,6 +281,7 @@ export class Lv4 extends Phaser.Scene {
    getKey() {
       this.haveKey = true;
       let key = this.getTileNearPlayer(this.keyLayer);
+      this.sound.play('key');
       key.visible = false;
       key.properties.collides = false;
       this.keyLayer.setCollisionByProperty({collides: false}, false);

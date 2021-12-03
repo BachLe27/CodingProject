@@ -39,14 +39,17 @@ export class Lv2 extends Phaser.Scene {
       this.groundLayer = this.map.createLayer('ground', terrain, this.loadX, this.loadY);
       this.questionLayer = this.map.createLayer('chest', chest, this.loadX, this.loadY);
       this.keyLayer = this.map.createLayer('key', key, this.loadX, this.loadY);
+      this.barrier = this.map.createLayer('object', terrain, this.loadX, this.loadY);
 
       this.player = this.physics.add.sprite(this.playerX, this.playerY, 'female');
       
       this.groundLayer.setCollisionByProperty({collides: true});
       this.questionLayer.setCollisionByProperty({collides: true});
       this.keyLayer.setCollisionByProperty({collides: true});
+      this.barrier.setCollisionByProperty({collides: true});
 
       this.physics.add.collider(this.player, this.groundLayer);
+      this.physics.add.collider(this.player, this.barrier);
 
       this.physics.add.collider(
          this.player, this.keyLayer, () => this.getKey(),
@@ -124,6 +127,7 @@ export class Lv2 extends Phaser.Scene {
             const frame = this.add.image(800 / 2, 600 / 2, 'frame');
 
             const noti = "Người tạo ra virus là:";
+            this.sound.play('win');
             const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti, notiFormat);
 
             const btn = this.add.image(470, 355, 'btn').setScale(0.6).setOrigin(0, 0);
@@ -255,9 +259,11 @@ export class Lv2 extends Phaser.Scene {
          this.score += this.bonusScore;
          this.scoreText.text = "Điểm: " + this.score;
          if (this.bonusScore == 0) this.bonusScore = 100;
+         this.sound.play('play');
       } else {
          if (this.bonusScore == 50) this.bonusScore = 0;
          if (this.bonusScore == 100) this.bonusScore = 50;
+         this.sound.play('wrong');
       }
       
       // Đổi trạng thái của chest
@@ -277,6 +283,7 @@ export class Lv2 extends Phaser.Scene {
       this.haveKey = true;
       let key = this.getTileNearPlayer(this.keyLayer);
       key.visible = false;
+      this.sound.play('key');
       key.properties.collides = false;
       this.keyLayer.setCollisionByProperty({collides: false}, false);
    }
