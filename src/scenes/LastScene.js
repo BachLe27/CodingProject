@@ -26,7 +26,7 @@ export class LastScene extends Phaser.Scene {
       var scoreboard = this.add.image(800/2, 600/2, 'scoreboard');
 
       var btn = this.add.image(345, 375, 'ok').setOrigin(0, 0);
-      btn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+      btn.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       // Sau khi luu ten
       

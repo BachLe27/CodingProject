@@ -5,14 +5,14 @@ export class MainMenu extends Phaser.Scene {
    }
 
    preload() {
-      this.load.image('logo', 'assets/MainMenu/image/logo.png');
-      this.load.image('play-btn', 'assets/MainMenu/image/play-btn.png');
-      this.load.image('highscore-btn', 'assets/MainMenu/image/highscore-btn.png');
-      this.load.image('choose', 'assets/MainMenu/image/arrow.png');
+      this.load.image('logo', './assets/MainMenu/image/logo.png');
+      this.load.image('play-btn', './assets/MainMenu/image/play-btn.png');
+      this.load.image('highscore-btn', './assets/MainMenu/image/highscore-btn.png');
+      this.load.image('choose', './assets/MainMenu/image/arrow.png');
       this.load.image("bg", "./assets/MainMenu/image/covid.jpg");
       this.load.audio("play", "./assets/MainMenu/audio/play.wav");
-      this.load.image('scoreboard', 'assets/Game/scoreboard.png');
-      this.load.image('ok', 'assets/Game/oke.png');
+      this.load.image('scoreboard', './assets/Game/scoreboard.png');
+      this.load.image('ok', './assets/Game/oke.png');
    }
 
    create() {
@@ -20,10 +20,10 @@ export class MainMenu extends Phaser.Scene {
       this.sound.mute = false;
       const playBtn = this.add.image(280, 450, 'play-btn').setScale(0.2);
       playBtn.setOrigin(0, 0);
-      playBtn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+      playBtn.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       const highscoreBtn = this.add.image(530, 450, 'highscore-btn').setOrigin(0,0).setScale(0.35); 
-      highscoreBtn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+      highscoreBtn.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       highscoreBtn.on('pointerup', () => {
          this.scene.launch('HighScore', {LastScene: false});

@@ -130,7 +130,7 @@ export class Lv1 extends Phaser.Scene {
                font: 'bold 16px Arial', align: 'center',
                stroke: "#000000", strokeThickness: 4,
             });
-            btn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+            btn.setInteractive({ cursor: './url(assets/Game/cursor/Link.cur), pointer'});
 
             btn.on("pointerup", () => {
                this.scene.start("Story2", {score: this.score}, this);
@@ -176,7 +176,7 @@ export class Lv1 extends Phaser.Scene {
          let Y = (i < 2 ? answerFrameY[0]: answerFrameY[1]);
 
          let frame =  this.add.image(X, Y, 'frame').setScale(0.6).setOrigin(0, 0);
-         frame.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+         frame.setInteractive({ cursor: './url(assets/Game/cursor/Link.cur), pointer'});
 
          frame.on("pointerover", () => {
             frame.setTint(0xff0000);

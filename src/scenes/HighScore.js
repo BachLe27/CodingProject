@@ -28,7 +28,7 @@ export class HighScore extends Phaser.Scene {
       
       const close = this.add.image(600, 100, 'close').setOrigin(0,0).setScale(0.25); 
 
-      close.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+      close.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
       if (this.LastScene == false) {
          close.on('pointerup', () => {
             this.scene.stop('HighScore')
@@ -38,7 +38,7 @@ export class HighScore extends Phaser.Scene {
          close.setInteractive({useHandPointer: false});
 
          this.tryagain = this.add.image(400, 555, 'tryagain').setScale(0.3);
-         this.tryagain.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+         this.tryagain.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
          this.tryagain.on("pointerup", () => {
             location.reload();
          }, this)

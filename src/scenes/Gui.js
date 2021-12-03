@@ -13,7 +13,7 @@ export class Gui extends Phaser.Scene {
 
    create() {
 
-      this.input.setDefaultCursor('url(assets/Game/cursor/normal.cur), pointer');
+      this.input.setDefaultCursor('url(./assets/Game/cursor/normal.cur), pointer');
 
       let music = this.sound.add('mainmenu-music');
       music.play({volume: 0.4, mute: false, loop: true});
@@ -34,7 +34,7 @@ export class Gui extends Phaser.Scene {
          music.mute = true;
       }, this);
 
-      musicOff.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+      musicOff.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       musicOff.on('pointerup', () => {
          musicOn.setVisible(true);
@@ -43,7 +43,7 @@ export class Gui extends Phaser.Scene {
       }, this);
 
 
-      soundOn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+      soundOn.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       soundOn.on('pointerup', () => {
          soundOn.setVisible(false);
@@ -51,7 +51,7 @@ export class Gui extends Phaser.Scene {
          this.game.sound.mute = true;
       }, this);
 
-      soundOff.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
+      soundOff.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       soundOff.on('pointerup', () => {
          soundOn.setVisible(true);

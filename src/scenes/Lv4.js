@@ -134,7 +134,7 @@ export class Lv4 extends Phaser.Scene {
             const btnText = this.add.text(495, 360, 'Tiếp tục', {
                font: 'bold 16px Arial', align: 'center'
             });
-            btn.setInteractive({useHandCursor: true});
+            btn.setInteractive({ cursor: './url(assets/Game/cursor/Link.cur), pointer'});
 
             btn.on("pointerup", () => {
                this.scene.start("End", {score: this.score}, this);
@@ -181,7 +181,7 @@ export class Lv4 extends Phaser.Scene {
          let Y = (i < 2 ? answerFrameY[0]: answerFrameY[1]);
 
          let frame =  this.add.image(X, Y, 'frame').setScale(0.6).setOrigin(0, 0);
-         frame.setInteractive({useHandCursor: true});
+         frame.setInteractive({ cursor: './url(assets/Game/cursor/Link.cur), pointer'});
 
          frame.on("pointerover", () => {
             frame.setTint(0xff0000);
