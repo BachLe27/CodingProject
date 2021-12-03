@@ -1,47 +1,166 @@
 {
    "questions": [
       {
-         "content": "Cóc vàng của kì Summer 2021 của CLB JS tên là?",
+         "content": "Biến thể covid mới nhất tên là gì?",
          "answers" : [
+            {
+               "content": "Alpha", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Beta", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Gamma", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Omicron", 
+               "isCorrect" : true
+            }
+         ]
+      }, 
+
+      {
+         "content": "CLB JS thành lập năm bao nhiêu?",
+         "answers" : [
+            {
+               "content": "1994", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "2004", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "2014", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "1984", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Gen 9 của CLB JS có ai là fuckgirl?",
+         "answers" : [
+            {
+               "content": "Cả An và Hà", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Không có", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Nguyễn Thị An", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Vũ Thị Hà", 
+               "isCorrect" : true
+            }
+         ]  
+      },
+
+      {
+         "content": "Ai sau đây là trap girl?",
+         "answers" : [
+            {
+               "content": "Nguyễn Thị An", 
+               "isCorrect" : true
+            }, 
             {
                "content": "Lê Thanh Bình", 
                "isCorrect" : false
+            },
+
+            {
+               "content": "Phan Trường Giang", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Vũ Hải Lâm", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+      {
+         "content": "Năm 2002 cũng có 1 đại dịch, tên là?",
+         "answers" : [
+            {
+               "content": "Sốt xuất huyết", 
+               "isCorrect" : false
             }, 
+            {
+               "content": "SARS", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "HIV/AIDS", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Không đáp án nào đúng", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Bao giờ thì bán được 1 tỉ gói mè?",
+         "answers" : [
+            {
+               "content": "Không biết...", 
+               "isCorrect" : true
+            }, 
+            {
+               "content": "5 năm", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "20 năm", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Bao giờ th Bình có ny", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Chủ nhiệm gen 8 tên đầy đủ là gì?",
+         "answers" : [
+            {
+               "content": "Khuất", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Khuất Mạnh Hoàng", 
+               "isCorrect" : true
+            },
+
             {
                "content": "Hoàng Mạnh Khuất", 
                "isCorrect" : false
             },
 
             {
-               "content": "Cao Quốc Dũng", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phạm Bằng Hữu", 
-               "isCorrect" : false
-            }
-         ]
-      }, 
-
-      {
-         "content": "Ai là người đang cầm đầu CLB JS?",
-         "answers" : [
-            {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
                "content": "Vũ Hải Lâm", 
                "isCorrect" : false
             }
@@ -49,95 +168,96 @@
       },
 
       {
-         "content": "Năm 2021 là năm hoạt động thứ mấy của CLB JS?",
+         "content": "Ca sĩ nào của VN có bài hát về đại dịch Corona hợp tác cùng MIN?",
          "answers" : [
             {
-               "content": "6", 
-               "isCorrect" : false
+               "content": "Erik", 
+               "isCorrect" : true
             }, 
             {
-               "content": "7", 
+               "content": "Lê Bảo Bình", 
                "isCorrect" : false
             },
 
             {
-               "content": "9", 
+               "content": "Noo Phước Thịnh", 
                "isCorrect" : false
             },
 
             {
-               "content": "10", 
-               "isCorrect" : true
-            }
-         ]  
-      },
-
-      {
-         "content": "Ai là người đang cầm đầu CLB JS?",
-         "answers" : [
-            {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-      {
-         "content": "Ai là người đang cầm đầu CLB JS?",
-         "answers" : [
-            {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
+               "content": "Trịnh Công Sơn", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
+         "content": "Quốc gia nhiều đảo nhất thế giới?",
          "answers" : [
             {
-               "content": "Khuất Mạnh Hoàng", 
+               "content": "Thái Lan", 
                "isCorrect" : false
             }, 
             {
-               "content": "Lê Thanh Bình", 
+               "content": "Thụy Điển", 
                "isCorrect" : true
             },
 
             {
-               "content": "Phan Trường Giang", 
+               "content": "Phần Lan", 
                "isCorrect" : false
             },
 
             {
-               "content": "Vũ Hải Lâm", 
+               "content": "Úc", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Nước nào đông dân thứ 3 trên thế giới?",
+         "answers" : [
+            {
+               "content": "Ấn Độ", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Mỹ", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Nga", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Trung Quốc", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Thủ đô của Mỹ?",
+         "answers" : [
+            {
+               "content": "Washington", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Washington D.C", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "New York", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Boston", 
                "isCorrect" : false
             }
          ]  
