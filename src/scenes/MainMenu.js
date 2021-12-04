@@ -17,8 +17,6 @@ export class MainMenu extends Phaser.Scene {
 
    create() {
 
-      this.input.setDefaultCursor('url(./assets/Game/cursor/Normal.cur), pointer');
-      
       this.add.image(800/2, 600/2, 'bg');
       this.sound.mute = false;
       const playBtn = this.add.image(280, 450, 'play-btn').setScale(0.2);

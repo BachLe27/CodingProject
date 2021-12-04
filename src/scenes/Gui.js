@@ -13,6 +13,8 @@ export class Gui extends Phaser.Scene {
 
    create() {
 
+      this.input.setDefaultCursor('url(./assets/Game/cursor/Normal.cur), pointer');
+
       let music = this.sound.add('mainmenu-music');
       music.play({volume: 0.4, mute: false, loop: true});
 
