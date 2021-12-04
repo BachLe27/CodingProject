@@ -30,7 +30,8 @@ export class LoadScene extends Phaser.Scene {
    }
 
    create() {
-
+      this.scene.start('Lv1');
+      
       this.anims.create({
          key: "down", 
          frames: this.anims.generateFrameNumbers("female", {frames: [0, 1, 2]}),
@@ -90,6 +91,6 @@ export class LoadScene extends Phaser.Scene {
    }
    
    update() {
-      this.scene.start('Lv1');
+      
    }
 }
