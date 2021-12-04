@@ -129,7 +129,7 @@ export class Lv3 extends Phaser.Scene {
 
             const frame = this.add.image(800 / 2, 600 / 2, 'frame');
 
-            const noti = "Người tạo ra virus là:";
+            const noti = "Virus corona là do con người tạo ra...";
             this.sound.play('win');
             const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti, notiFormat);
 

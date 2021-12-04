@@ -121,7 +121,7 @@ export class Lv1 extends Phaser.Scene {
 
             const frame = this.add.image(800 / 2, 600 / 2, 'frame');
 
-            const noti = "Bạn đã tìm được vaccine chống virus";
+            const noti = "Bạn đã tìm được kháng thể chống virus";
             const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti, notiFormat);
 
             this.sound.play('win');
