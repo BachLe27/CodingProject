@@ -6,7 +6,6 @@ export class HighScore extends Phaser.Scene {
   
    init(data) {
       this.LastScene = data.LastScene; 
-      this.score = data.score;
    }
 
    preload() {
@@ -15,12 +14,15 @@ export class HighScore extends Phaser.Scene {
       this.load.image('tryagain', './assets/Game/tryagain.png');
    }
 
-   zeroPad(number, size) {
-      var stringNumber = String(number);
-      while (stringNumber.length < (size || 2)) {
-         stringNumber = "0" + stringNumber;
-      }
-      return stringNumber;
+   formatTime(seconds){
+      // Minutes
+      var minutes = Math.floor(seconds/60);
+      // Seconds
+      var partInSeconds = seconds%60;
+      // Adds left zeros to seconds
+      partInSeconds = partInSeconds.toString().padStart(2,'0');
+      // Returns formated time
+      return `${minutes}:${partInSeconds}`;
    }
 
    create() {
@@ -34,9 +36,9 @@ export class HighScore extends Phaser.Scene {
             this.scene.stop('HighScore')
          }, this);   
       } else {
+         close.setVisible(false);
          close.setInteractive(false);
-         close.setInteractive({useHandPointer: false});
-
+         
          this.tryagain = this.add.image(400, 555, 'tryagain').setScale(0.3);
          this.tryagain.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
          this.tryagain.on("pointerup", () => {
@@ -51,7 +53,7 @@ export class HighScore extends Phaser.Scene {
 
       for (let i = 0; i < Math.min(5, highscore.player.length); i++) {
          this.add.text(180, 180 + 68 * i, highscore.player[i].name, format);
-         this.add.text(500, 180 + 68 * i, this.zeroPad(highscore.player[i].score, 6), format);
+         this.add.text(500, 180 + 68 * i, this.formatTime(highscore.player[i].score), format);
         
       }
    }

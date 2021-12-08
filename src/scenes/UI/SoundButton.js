@@ -1,6 +1,6 @@
-export class Gui extends Phaser.Scene {
+export class SoundButton extends Phaser.Scene {
    constructor() {
-      super('Gui');
+      super('SoundButton');
    }
    
    preload() {
@@ -15,8 +15,8 @@ export class Gui extends Phaser.Scene {
 
       this.input.setDefaultCursor('url(./assets/Game/cursor/Normal.cur), pointer');
 
-      let music = this.sound.add('mainmenu-music');
-      music.play({volume: 0.4, mute: false, loop: true});
+   //    let music = this.sound.add('mainmenu-music');
+   //    music.play({volume: 0.1, mute: false, loop: true});
 
       let musicOn =  this.add.image(10, 10, 'music-on').setOrigin(0,0).setScale(0.3);
       let musicOff =  this.add.image(10, 10, 'music-off').setOrigin(0,0).setScale(0.3);

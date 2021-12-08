@@ -42,7 +42,7 @@ export class MainMenu extends Phaser.Scene {
             player: []
          }
          for (let i = 0; i < 5; i++) {
-            sample.player.push({name: '', score: 0})
+            sample.player.push({name: '', score: 3599})
          };
          
          // console.log(sample);
@@ -50,7 +50,7 @@ export class MainMenu extends Phaser.Scene {
       }
 
 
-      this.scene.launch('Gui');
+      this.scene.launch('SoundButton');
 
       // click and release
       playBtn.on("pointerup", () => {

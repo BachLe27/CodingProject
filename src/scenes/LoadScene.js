@@ -5,16 +5,23 @@ export class LoadScene extends Phaser.Scene {
    }
 
    preload() {
-      this.load.image("terrain-img", "./assets/Game/terrain.png");
+      this.load.image('terrain-img', './assets/Game/terrain_atlas.png');
       this.load.image("chest-img", "./assets/Game/chest.png");
       this.load.image("frame", "./assets/Game/frame.png");
       this.load.image("key-img", "./assets/Game/key.png");
       this.load.image("btn", "./assets/Game/blue_button.png");
       this.load.image("game-bg", "./assets/Game/covid.jpg");
 
+      this.load.spritesheet("virus", "./assets/Game/virus.png", {
+         frameWidth: 31,
+         frameHeight: 31
+      });
+
       this.load.audio('wrong', "./assets/Game/audio/wrong.mp3");
       this.load.audio('win', "./assets/Game/audio/win.wav");
       this.load.audio('key', "./assets/Game/audio/key.wav");
+
+      this.load.image('quest', './assets/Game/treasure.png');
 
       this.load.spritesheet('female', "./assets/Charactor/Female.png", {
          frameWidth: 32,
@@ -29,8 +36,20 @@ export class LoadScene extends Phaser.Scene {
    }
 
    create() {
-      this.scene.start('Lv1');
+      this.game.registry.set('score', 0);
       
+      this.scene.start('LastScene');
+      
+      this.anims.create({
+         key: "move", 
+         frames: this.anims.generateFrameNumbers("virus", {
+            start: 0, end: 17
+         }),
+         frameRate: 20,
+         repeat: -1
+      });
+
+
       this.anims.create({
          key: "down", 
          frames: this.anims.generateFrameNumbers("female", {frames: [0, 1, 2]}),

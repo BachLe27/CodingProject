@@ -34,7 +34,7 @@ export class Story1 extends Phaser.Scene {
       this.format = { 
          font: "bold 20px Arial", fill: "#FBFF00" , align: 'center', 
          wordWrap: { width: 580, useAdvancedWrap: true },
-         stroke: "#000000", strokeThickness: 4, 
+         stroke: "#000000", strokeThickness: 4,
       }  
 
 
@@ -47,7 +47,7 @@ export class Story1 extends Phaser.Scene {
          ease: 'Linear',
       })
       
-      this.add.text(800 - 130, 570, "Click để tiếp tục...", {font: "14px Arial"});
+      // this.add.text(800 - 130, 570, "Click để tiếp tục...", {font: "14px Arial"});
 
       this.spacebar = this.input.keyboard.addKey('space');
       

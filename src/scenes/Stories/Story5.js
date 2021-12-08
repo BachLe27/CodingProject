@@ -1,7 +1,7 @@
 
-export class End extends Phaser.Scene {
+export class Story5 extends Phaser.Scene {
    constructor() {
-      super('End');
+      super('Story5');
    }
 
    init(data) {

@@ -20,7 +20,7 @@ export class Story2 extends Phaser.Scene {
       var { width, height } = this.sys.game.canvas;
       
       this.content = [
-         "Sau bao ngày chiến đấu anh dũng, cả tổ đội ngày nào chỉ còn mỗi mình Vân sống sót. Cuối cùng, cô cũng tìm ra phương thuốc...",
+         "Sau bao ngày chiến đấu anh dũng, cả tổ đội ngày nào chỉ còn mỗi mình Vân sống sót. Cuối cùng, cô cũng tìm ra vaccine để chống virus...",
          "Nhờ có Vân mà cuộc sống bình yên trên thế giới mới được khôi phục trở lại...",
          "Nhưng bình yên chỉ được 1 thời gian ngắn ngủi, con virus quái ác đã quay lại với biến thể Omicron, mạnh gấp 7749 lần những biến thể trước...",
          "Một lần nữa, sứ mệnh cao cả gọi tên Vân",
@@ -46,7 +46,7 @@ export class Story2 extends Phaser.Scene {
          ease: 'Linear',
       })
       
-      this.add.text(800 - 130, 570, "Click để tiếp tục...", {font: "14px Arial"});
+      // this.add.text(800 - 130, 570, "Click để tiếp tục...", {font: "14px Arial"});
 
       this.spacebar = this.input.keyboard.addKey('space');
       

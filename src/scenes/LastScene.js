@@ -4,20 +4,23 @@ export class LastScene extends Phaser.Scene {
       super('LastScene');
    }
 
-   init(data) {
-      this.score = data.score || 0;
+   init() {
+      
    }
 
    preload() {
       
    }
 
-   zeroPad(number, size) {
-      var stringNumber = String(number);
-      while (stringNumber.length < (size || 2)) {
-         stringNumber = "0" + stringNumber;
-      }
-      return stringNumber;
+   formatTime(seconds){
+      // Minutes
+      var minutes = Math.floor(seconds/60);
+      // Seconds
+      var partInSeconds = seconds%60;
+      // Adds left zeros to seconds
+      partInSeconds = partInSeconds.toString().padStart(2,'0');
+      // Returns formated time
+      return `${minutes}:${partInSeconds}`;
    }
 
    create() {
@@ -29,10 +32,12 @@ export class LastScene extends Phaser.Scene {
       btn.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       // Sau khi luu ten
+      var score = this.game.registry.get('score');
+      var time = this.formatTime(score);
+
+      this.add.text(310, 160, 'Your Time:', { font: 'Bold 32px Courier', fill: '#ffffff', align: 'center' });
       
-      this.add.text(290, 160, 'Your Score:', { font: 'Bold 32px Courier', fill: '#ffffff', align: 'center' });
-      
-      this.add.text(310, 205, this.zeroPad(this.score, 6), { font: 'Bold 48px Courier', fill: '#ffffff', align: 'center' });
+      this.add.text(340, 205, time, { font: 'Bold 48px Courier', fill: '#ffffff', align: 'center' });
 
       this.add.text(250, 270, 'Enter your name:', { font: '32px Courier', fill: '#ffffff' });
 
@@ -60,17 +65,17 @@ export class LastScene extends Phaser.Scene {
 
          var info = {
             name: textEntry.text,
-            score: this.score
+            score: this.game.registry.get('score'),
          }
 
-         if (this.score <= highscore.player.at(-1).score) {
+         if (this.game.registry.get('score') >= highscore.player.at(-1).score) {
             highscore.player.push(info);
             
          } else {
             for (let i = 0; i < highscore.player.length; i++) {
                // console.log(this.score, highscore.player[i].score);
-               if (this.score > highscore.player[i].score) {
-                  // console.log('added');
+               if (this.game.registry.get('score') < highscore.player[i].score) {
+                  console.log('added');
                   highscore.player.splice(i, 0, info);
                   break;
                }
@@ -81,7 +86,7 @@ export class LastScene extends Phaser.Scene {
 
          this.sound.play('play');
          this.scene.sleep('LastScene');
-         this.scene.launch('HighScore', {LastScene: true, score: this.score});
+         this.scene.launch('HighScore', {LastScene: true});
 
       }, this);
    }

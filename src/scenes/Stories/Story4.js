@@ -49,7 +49,7 @@ export class Story4 extends Phaser.Scene {
          ease: 'Linear',
       })
       
-      this.add.text(800 - 130, 570, "Click để tiếp tục...", {font: "14px Arial"});
+      // this.add.text(800 - 130, 570, "Click để tiếp tục...", {font: "14px Arial"});
 
       this.spacebar = this.input.keyboard.addKey('space');
       
