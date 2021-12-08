@@ -48,9 +48,9 @@ export class Timer extends Phaser.Scene {
       if (this.initialTime <= 10) {
          this.format.fill = "#ff0000";
          this.text.setStyle(this.format);
-         console.log(this.text.style);
+         // console.log(this.text.style);
       }
-      if (this.initialTime == 0) 
+      if (this.initialTime <= 0) 
       {
          this.player.active = false;
          this.scene.start('GameOver', {noti: "Bạn đã quá chậm, đại dịch đã bùng nổ và không còn gì có thể ngăn chặn !!"}, this);

@@ -197,6 +197,7 @@ export class Question extends Phaser.Scene {
          if (this.game.registry.get('sound'))
             this.sound.play('wrong');
          this.game.registry.set('penalty', 5);
+         // this.physics.
       }
    }
 

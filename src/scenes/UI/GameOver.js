@@ -12,7 +12,8 @@ export class GameOver extends Phaser.Scene {
    }
 
    create() {
-
+      this.game.registry.set('stop', true);
+      
       const frame = this.add.image(800/2, 600/2, 'frame').setScale(1.2);
 
       const noti = this.noti; 

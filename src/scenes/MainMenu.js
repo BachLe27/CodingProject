@@ -54,7 +54,7 @@ export class MainMenu extends Phaser.Scene {
 
       // click and release
       playBtn.on("pointerup", () => {
-         if (this.game.registry.get('sound')) this.sound.play("play");
+         this.sound.play("play");
          this.scene.start("Story1");
       })
       

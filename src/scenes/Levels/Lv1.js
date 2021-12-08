@@ -11,7 +11,7 @@ export class Lv1 extends Phaser.Scene {
     }
 
    create() {
-      
+      this.game.registry.set('stop', false);
       this.game.registry.set('time', 60);
       this.game.registry.set('running', true);
       this.game.registry.set('penalty', 0);
@@ -19,7 +19,7 @@ export class Lv1 extends Phaser.Scene {
       this.game.registry.set('curQuestion', 0);
       this.game.registry.set('totalChest', 5);
 
-      this.game.registry.set('hasKey', false);
+      this.game.registry.set('hasKey', true);
       this.game.registry.set('level', 1);
 
       // this.scene.launch('SoundButton');
@@ -28,18 +28,7 @@ export class Lv1 extends Phaser.Scene {
       this.createTileMap();
       this.createPlayer();
 
-      this.virus = this.physics.add.sprite(64 + 16, 64 + 48, 'virus');
-      this.virus.play('move');
-      
-      this.physics.add.collider(this.virus, this.maze);
-      this.virus.setBounce(1);
-      this.virus.active = false;
-      
-      
-      this.physics.add.collider(this.player, this.virus, (player, virus) => {
-         this.hurtPlayer(player);
-         this.move(virus);
-      });
+      this.createVirus();
 
       this.scene.launch('Tutorial', {player: this.player}, this);
       this.setPhysics();
@@ -94,8 +83,56 @@ export class Lv1 extends Phaser.Scene {
       })
    }
 
-   move(virus) {
-      virus.setVelocity(0, 70);
+   createVirus() {
+      // this.virus = this.physics.add.sprite(64 + 16, 64 + 48, 'virus');
+      // this.virus.play('move');
+
+      // this.virus.setBounce(1);
+
+      // this.physics.add.collider(this.virus, this.maze);
+      
+      // this.physics.add.collider(this.player, this.virus, (player, virus) => {
+      //    this.hurtPlayer(player);
+      //    this.move(virus);
+      // });
+
+      // this.move(this.virus);
+
+      var spawn = [
+         {
+            x: 184, 
+            y: 80,
+            vX: 0,
+            vY: 50,
+         },
+         {
+            x: 550, 
+            y: 100,
+            vX: 30,
+            vY: 0
+         },
+      ]
+
+      this.viruses = this.add.group();
+
+      for (let i = 0; i < spawn.length; i++) {
+         let v = this.physics.add.sprite(spawn[i].x, spawn[i].y, 'virus');
+         this.viruses.add(v);
+         v.play('move');
+         v.setBounce(1);
+         v.vX = spawn[i].vX, v.vY = spawn[i].vY;
+         this.move(v, v.vX, v.vY);
+      }
+
+      this.physics.add.collider(this.viruses, this.maze);
+      this.physics.add.collider(this.player, this.viruses, (player, virus) => {
+         this.hurtPlayer(player);
+         this.move(virus, virus.vX, virus.vY);
+      });
+   }
+
+   move(virus, vX, vY) {
+      virus.setVelocity(vX, vY);
    }
 
    createPlayer() {
@@ -177,26 +214,29 @@ export class Lv1 extends Phaser.Scene {
 
    update() {
       // movement
-      var x = 0, y = 0;
-      const speed = 120;
-      if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
-         this.player.play("up");
-         y -= speed;
-      }
-      if ( (this.cursors["down"].isDown || this.cursors["s"].isDown) && this.player.active) {
-         this.player.play("down");
-         y += speed; 
-      }
-      if ( (this.cursors["right"].isDown || this.cursors["d"].isDown) && this.player.active) {
-         this.player.play("right");
-         x += speed;
-      }
-      if ( (this.cursors["left"].isDown || this.cursors["a"].isDown) && this.player.active) {
-         this.player.play("left");
-         x -= speed;
-      }
-      this.player.setVelocity(x, y);
+      if (this.game.registry.get('stop') == false) {
+         var x = 0, y = 0;
+         const speed = 120;
+         if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
+            this.player.play("up");
+            y -= speed;
+         }
+         if ( (this.cursors["down"].isDown || this.cursors["s"].isDown) && this.player.active) {
+            this.player.play("down");
+            y += speed; 
+         }
+         if ( (this.cursors["right"].isDown || this.cursors["d"].isDown) && this.player.active) {
+            this.player.play("right");
+            x += speed;
+         }
+         if ( (this.cursors["left"].isDown || this.cursors["a"].isDown) && this.player.active) {
+            this.player.play("left");
+            x -= speed;
+         }
 
+         this.player.setVelocity(x, y);
+      }
+      
 
       if (this.game.registry.get('curQuestion') == this.game.registry.get('totalChest')) {
          this.keyLayer.visible = true;
@@ -205,7 +245,5 @@ export class Lv1 extends Phaser.Scene {
          null, this);
       }
 
-      if(this.virus.active)
-         this.move(this.virus);
    }
 }
