@@ -189,11 +189,13 @@ export class Question extends Phaser.Scene {
       // Đổi trạng thái của chest
       if (isCorrect) {
          this.replaceChest(this.chest);
-         this.sound.play('play');
+         if (this.game.registry.get('sound'))
+            this.sound.play('play');
          this.game.registry.set('curQuestion', this.curQuestion + 1);
       } else {
          // this.questionLayer.replaceByIndex(this.chest.index, this.chest.index - 10, this.chest.x, this.chest.y, 1, 1);
-         this.sound.play('wrong');
+         if (this.game.registry.get('sound'))
+            this.sound.play('wrong');
          this.game.registry.set('penalty', 5);
       }
    }

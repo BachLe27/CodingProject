@@ -22,7 +22,6 @@ export class Lv3 extends Phaser.Scene {
       this.game.registry.set('hasKey', false);
       this.game.registry.set('level', 3);
 
-      this.scene.launch('SoundButton');
       this.scene.launch('Quest');
       
 
@@ -113,7 +112,8 @@ export class Lv3 extends Phaser.Scene {
 
    getKey(key) {
       this.game.registry.set('hasKey', true);
-      this.sound.play('key');
+      if (this.game.registry.get('sound'))
+         this.sound.play('key');
       var tiles = this.map.getTilesWithin(key.x - 1, key.y - 1, 3, 3, {
          isColliding: true,
       }, this.keyLayer);

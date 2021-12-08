@@ -11,6 +11,7 @@ export class LoadScene extends Phaser.Scene {
       this.load.image("key-img", "./assets/Game/key.png");
       this.load.image("btn", "./assets/Game/blue_button.png");
       this.load.image("game-bg", "./assets/Game/covid.jpg");
+      this.load.audio("hurt", "./assets/Game/audio/pain.mp3");
 
       this.load.spritesheet("virus", "./assets/Game/virus.png", {
          frameWidth: 31,

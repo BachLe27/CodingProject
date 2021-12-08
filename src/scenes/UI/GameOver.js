@@ -3,6 +3,10 @@ export class GameOver extends Phaser.Scene {
       super('GameOver');
    }
 
+   init(data) {
+      this.noti = data.noti;
+   }
+
    preload() {
       
    }
@@ -11,7 +15,7 @@ export class GameOver extends Phaser.Scene {
 
       const frame = this.add.image(800/2, 600/2, 'frame').setScale(1.2);
 
-      const noti = "Bạn đã quá chậm, đại dịch đã bùng nổ và không còn gì có thể ngăn chặn !!";
+      const noti = this.noti; 
 
       const notiFormat = { font: 'bold 23px Arial', fill: 'black', align: 'center', 
          wordWrap: { width: 440, useAdvancedWrap: true } 

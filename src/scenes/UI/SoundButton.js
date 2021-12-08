@@ -15,8 +15,8 @@ export class SoundButton extends Phaser.Scene {
 
       this.input.setDefaultCursor('url(./assets/Game/cursor/Normal.cur), pointer');
 
-   //    let music = this.sound.add('mainmenu-music');
-   //    music.play({volume: 0.1, mute: false, loop: true});
+      let music = this.sound.add('mainmenu-music');
+      music.play({volume: 0.1, mute: false, loop: true});
 
       let musicOn =  this.add.image(10, 10, 'music-on').setOrigin(0,0).setScale(0.3);
       let musicOff =  this.add.image(10, 10, 'music-off').setOrigin(0,0).setScale(0.3);
@@ -27,7 +27,8 @@ export class SoundButton extends Phaser.Scene {
       soundOff.setVisible(false);
 
       musicOn.setInteractive({ cursor: 'url(assets/Game/cursor/Link.cur), pointer'});
-
+      this.game.registry.set('sound', true);
+      
       musicOn.on('pointerup', () => {
          musicOn.setVisible(false);
          musicOff.setVisible(true);
@@ -48,7 +49,7 @@ export class SoundButton extends Phaser.Scene {
       soundOn.on('pointerup', () => {
          soundOn.setVisible(false);
          soundOff.setVisible(true);
-         this.game.sound.mute = true;
+         this.game.registry.set('sound', false);
       }, this);
 
       soundOff.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
@@ -56,7 +57,7 @@ export class SoundButton extends Phaser.Scene {
       soundOff.on('pointerup', () => {
          soundOn.setVisible(true);
          soundOff.setVisible(false);
-         this.game.sound.mute = false;
+         this.game.registry.set('sound', true);
       }, this);
    }
 }

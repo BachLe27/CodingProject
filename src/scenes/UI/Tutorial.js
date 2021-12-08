@@ -35,7 +35,8 @@ export class Tutorial extends Phaser.Scene {
       btn.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       btn.on("pointerup", () => {
-         this.sound.play('play');
+         if (this.game.registry.get('sound'))
+            this.sound.play('play');
          this.player.active = true;
          this.scene.stop(`Tutorial`);
          this.scene.launch('Timer', { player: this.player }, this);

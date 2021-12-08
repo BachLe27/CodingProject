@@ -22,23 +22,26 @@ export class Lv1 extends Phaser.Scene {
       this.game.registry.set('hasKey', false);
       this.game.registry.set('level', 1);
 
-      this.scene.launch('SoundButton');
+      // this.scene.launch('SoundButton');
       this.scene.launch('Quest');
 
       this.createTileMap();
       this.createPlayer();
 
-      this.virus = this.physics.add.sprite(64 + 16, 64 + 16, 'virus');
+      this.virus = this.physics.add.sprite(64 + 16, 64 + 48, 'virus');
       this.virus.play('move');
       
       this.physics.add.collider(this.virus, this.maze);
       this.virus.setBounce(1);
-
-      this.move(this.virus);
-
+      this.virus.active = false;
+      
+      
+      this.physics.add.collider(this.player, this.virus, (player, virus) => {
+         this.hurtPlayer(player);
+         this.move(virus);
+      });
 
       this.scene.launch('Tutorial', {player: this.player}, this);
-
       this.setPhysics();
 
       // Cau hoi
@@ -58,9 +61,41 @@ export class Lv1 extends Phaser.Scene {
       );
    }
 
+   hurtPlayer(player) {
+      player.disableBody(true, true);
+      player.active = false;
+      if (this.game.registry.get('sound')) this.sound.play('hurt');
+      // this.resetPlayer();
+      this.time.addEvent({
+         delay: 500,
+         callback: this.resetPlayer,
+         callbackScope: this,
+         loop: false,
+      })
+   }
+
+   resetPlayer() {
+      var x = 64 + 16;
+      var y = 64 + 16;
+      this.player.enableBody(true, x, y, true, true);
+
+      this.player.alpha = 0.5;
+
+      var tween = this.tweens.add({
+         targets: this.player,
+         y: y,
+         ease: 'Power1',
+         duration: 1500,
+         repeat: 0,
+         onComplete: function() {
+            this.player.alpha = 1;
+         },
+         callbackScope: this,
+      })
+   }
 
    move(virus) {
-      virus.setVelocity(0, 20);
+      virus.setVelocity(0, 70);
    }
 
    createPlayer() {
@@ -127,7 +162,8 @@ export class Lv1 extends Phaser.Scene {
 
    getKey(key) {
       this.game.registry.set('hasKey', true);
-      this.sound.play('key');
+      if (this.game.registry.get('sound'))
+         this.sound.play('key');
       var tiles = this.map.getTilesWithin(key.x - 1, key.y - 1, 3, 3, {
          isColliding: true,
       }, this.keyLayer);
@@ -168,5 +204,8 @@ export class Lv1 extends Phaser.Scene {
             this.player, this.keyLayer, (player, key) => this.getKey(key),
          null, this);
       }
+
+      if(this.virus.active)
+         this.move(this.virus);
    }
 }
