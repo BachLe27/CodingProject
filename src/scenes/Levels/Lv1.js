@@ -12,14 +12,14 @@ export class Lv1 extends Phaser.Scene {
 
    create() {
       this.game.registry.set('stop', false);
-      this.game.registry.set('time', 60);
+      this.game.registry.set('time', 90);
       this.game.registry.set('running', true);
       this.game.registry.set('penalty', 0);
    
       this.game.registry.set('curQuestion', 0);
       this.game.registry.set('totalChest', 5);
 
-      this.game.registry.set('hasKey', true);
+      this.game.registry.set('hasKey', false);
       this.game.registry.set('level', 1);
 
       // this.scene.launch('SoundButton');
@@ -34,7 +34,8 @@ export class Lv1 extends Phaser.Scene {
       this.setPhysics();
 
       // Cau hoi
-      this.data = this.game.cache.json.entries.entries.questions;
+      this.data = this.shuffle(this.game.cache.json.entries.entries.questions.questions);
+      // console.log(this.data);
    
       this.cursors = this.input.keyboard.addKeys(
          {
@@ -49,6 +50,25 @@ export class Lv1 extends Phaser.Scene {
          }
       );
    }
+
+
+   shuffle(array) {
+      let currentIndex = array.length,  randomIndex;
+    
+      // While there remain elements to shuffle...
+      while (currentIndex != 0) {
+    
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+    
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex], array[currentIndex]];
+      }
+    
+      return array;
+    }
 
    hurtPlayer(player) {
       player.disableBody(true, true);

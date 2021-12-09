@@ -1,201 +1,273 @@
 {
    "questions": [
       {
-         "content": "Biến thể covid mới nhất tên là gì?",
+         "content": "Ai là người giành quả bóng vàng 2021?",
          "answers" : [
             {
-               "content": "Alpha", 
+               "content": "Neymar", 
                "isCorrect" : false
             }, 
             {
-               "content": "Beta", 
+               "content": "Ronaldo", 
                "isCorrect" : false
             },
 
             {
-               "content": "Gamma", 
+               "content": "Lewandowski", 
                "isCorrect" : false
             },
 
             {
-               "content": "Omicron", 
+               "content": "Messi", 
                "isCorrect" : true
             }
          ]
       }, 
 
       {
-         "content": "CLB JS thành lập năm bao nhiêu?",
+         "content": "Đội tuyển quốc gia Việt Nam vừa có kết quả như nào với đội tuyển Lào trong giải AFF Cup 2020 ngày 6/12",
          "answers" : [
             {
-               "content": "1994", 
+               "content": "2-2", 
                "isCorrect" : false
             }, 
             {
-               "content": "2004", 
+               "content": "2-1", 
                "isCorrect" : false
             },
 
             {
-               "content": "2014", 
+               "content": "2-0", 
                "isCorrect" : true
             },
 
             {
-               "content": "1984", 
+               "content": "1-1", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Gen 9 của CLB JS có ai là fuckgirl?",
+         "content": "Đâu là đội bóng vô địch giải C1 2020",
          "answers" : [
             {
-               "content": "Cả An và Hà", 
+               "content": "PSG", 
                "isCorrect" : false
             }, 
             {
-               "content": "Không có", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Nguyễn Thị An", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Thị Hà", 
-               "isCorrect" : true
-            }
-         ]  
-      },
-
-      {
-         "content": "Ai sau đây là trap girl?",
-         "answers" : [
-            {
-               "content": "Nguyễn Thị An", 
-               "isCorrect" : true
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-      {
-         "content": "Năm 2002 cũng có 1 đại dịch, tên là?",
-         "answers" : [
-            {
-               "content": "Sốt xuất huyết", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "SARS", 
+               "content": "Bayern Munich", 
                "isCorrect" : true
             },
 
             {
-               "content": "HIV/AIDS", 
+               "content": "Mancity", 
                "isCorrect" : false
             },
 
             {
-               "content": "Không đáp án nào đúng", 
+               "content": "Barcelona ", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Bao giờ thì bán được 1 tỉ gói mè?",
+         "content": "Ai trong những người dưới đây gi bàn trong trận Việt Nam vs Lào",
          "answers" : [
             {
-               "content": "Không biết...", 
+               "content": "Phan Văn Đức", 
                "isCorrect" : true
             }, 
             {
-               "content": "5 năm", 
+               "content": "Nguyễn Tiến Linh", 
                "isCorrect" : false
             },
 
             {
-               "content": "20 năm", 
+               "content": "Nguyễn Phong Hồng Duy", 
                "isCorrect" : false
             },
 
             {
-               "content": "Bao giờ th Bình có ny", 
+               "content": "Trần Minh Vương", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+      {
+         "content": "Erling Haaland thi đấu ở câu lạc bộ nào?",
+         "answers" : [
+            {
+               "content": "Manchester City", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Dortmund", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Liverpool", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "PSG", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Chủ nhiệm gen 8 tên đầy đủ là gì?",
+         "content": "Quế Ngọc Hải đá chính ở vị trí nào trong đội hình quốc gia?",
          "answers" : [
             {
-               "content": "Khuất", 
+               "content": "Tiền đạo", 
                "isCorrect" : false
             }, 
             {
-               "content": "Khuất Mạnh Hoàng", 
+               "content": "Tiền vệ", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Trung vệ", 
                "isCorrect" : true
             },
 
             {
-               "content": "Hoàng Mạnh Khuất", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
+               "content": "Hậu vệ", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Ca sĩ nào của VN có bài hát về đại dịch Corona hợp tác cùng MIN?",
+         "content": "Hiện tại đội tuyển quốc gia Việt Nam xếp thứ bao nhiêu trên bảng xếp hạng bóng đá thế giới",
          "answers" : [
             {
-               "content": "Erik", 
+               "content": "99", 
                "isCorrect" : true
             }, 
             {
-               "content": "Lê Bảo Bình", 
+               "content": "97", 
                "isCorrect" : false
             },
 
             {
-               "content": "Noo Phước Thịnh", 
+               "content": "103", 
                "isCorrect" : false
             },
 
             {
-               "content": "Trịnh Công Sơn", 
+               "content": "90", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Quốc gia nhiều đảo nhất thế giới?",
+         "content": "Đội bóng nào vô địch ngoại hạng Anh 2021?",
          "answers" : [
             {
-               "content": "Thái Lan", 
+               "content": "ManCity", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": " Liverpool", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Mu", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Chelsea", 
+               "isCorrect" : true
+            }
+         ]  
+      },
+
+      {
+         "content": "Đội bóng nào vô địch giải La Liga 2019?",
+         "answers" : [
+            {
+               "content": "Barca", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Real Madrid", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Atletico", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Valencia", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Kết quả giữa trận PSG và Man City gần đây là",
+         "answers" : [
+            {
+               "content": "MC 2-0 PSG", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "MC 2-1 PSG", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "MC 3-2 PSG", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "MC 1-0 PSG", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Kết quả giữa trận MU và Arsenal gần đây là",
+         "answers" : [
+            {
+               "content": "MU 3-1 Arsenal", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "MU 1-2 Arsenal", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "MU 3-2 Arsenal", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "MU 2-0 Arsenal", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Hiện tại Zlatan Ibrahimovic thi đấu cho đội tuyển nào?",
+         "answers" : [
+            {
+               "content": "Đức", 
                "isCorrect" : false
             }, 
             {
@@ -204,60 +276,60 @@
             },
 
             {
-               "content": "Phần Lan", 
+               "content": "Brazil", 
                "isCorrect" : false
             },
 
             {
-               "content": "Úc", 
+               "content": "Scotland", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Nước nào đông dân thứ 3 trên thế giới?",
+         "content": "Năm nay Cristiano Ronaldo bao nhiêu tuổi?",
          "answers" : [
             {
-               "content": "Ấn Độ", 
+               "content": "30", 
                "isCorrect" : false
             }, 
             {
-               "content": "Mỹ", 
+               "content": "32", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "38", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "36", 
                "isCorrect" : true
-            },
-
-            {
-               "content": "Nga", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Trung Quốc", 
-               "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Thủ đô của Mỹ?",
+         "content": "CLB nào đoạt giải CLB hay nhất năm trong 2021?",
          "answers" : [
             {
-               "content": "Washington", 
+               "content": "PSG", 
                "isCorrect" : false
             }, 
             {
-               "content": "Washington D.C", 
+               "content": "Chelsea", 
                "isCorrect" : true
             },
 
             {
-               "content": "New York", 
+               "content": "MU", 
                "isCorrect" : false
             },
 
             {
-               "content": "Boston", 
+               "content": "MC", 
                "isCorrect" : false
             }
          ]  

@@ -51,11 +51,18 @@ export class Question extends Phaser.Scene {
                wordWrap: { width: 300, useAdvancedWrap: true } 
             };
             const frame = this.add.image(800 / 2, 600 / 2, 'frame');
-            const noti = "Bạn đã tìm được vaccine chống virus";
-            const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti, notiFormat);
+            const noti = [
+               "Bạn đã tìm được vaccine chống virus", 
+               "Bạn đã tìm được kháng thể chống lại virus",
+               "Virus corona là do con người tạo ra...", 
+               "Bạn đã tìm được tung tích của kẻ tạo ra virus..." 
+            ];
+
+
+            const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti[this.level - 1], notiFormat);
             
-            const btn = this.add.image(470, 355, 'btn').setScale(0.6).setOrigin(0, 0);
-            const btnText = this.add.text(495, 356, 'Tiếp tục', {
+            const btn = this.add.image(460, 355, 'btn').setScale(0.6).setOrigin(0, 0);
+            const btnText = this.add.text(485, 356, 'Tiếp tục', {
                font: 'bold 16px Arial', align: 'center',
                stroke: "#000000", strokeThickness: 4,
             });
@@ -135,20 +142,21 @@ export class Question extends Phaser.Scene {
          wordWrap: { width: 500, useAdvancedWrap: true } 
       }; // text format cho câu hỏi
 
-      const answerFormat = { font: 'bold 18px Arial', fill: '#ffffff', align: 'left', stroke: "#000000",
+      const answerFormat = { font: 'bold 15px Arial', fill: '#ffffff', align: 'left', stroke: "#000000",
          stroke: "#000000", strokeThickness: 4,
-         wordWrap: { width: 200, useAdvancedWrap: true } 
+         wordWrap: { width: 220, useAdvancedWrap: true } 
       }; // text format cho câu trả lời
 
       // Question content
       const questionX = this.questionFrame.x - 250;
       const questionY = this.questionFrame.y - 40;
-      const question = this.question.questions[this.curQuestion];
+      const question = this.question[this.curQuestion];
+      // console.log(this.question);
       
       this.questionText = this.add.text(questionX, questionY, question.content, questionFormat);
       // Answer content
 
-      const offsetX = 100, offsetY = 12;
+      const offsetX = 120, offsetY = 20;
 
       for (let i = 0; i < this.answerFrame.getLength(); i++) {
          let frame = this.answerFrame.getChildren(0)[i];
