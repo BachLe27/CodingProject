@@ -1,167 +1,167 @@
 {
    "questions": [
       {
-         "content": "Ai là người sáng lập ra Google?",
+         "content": "Virus SAR-CoV-2 trông như thế nào?",
          "answers" : [
             {
-               "content": "Larry Page", 
-               "isCorrect" : true
+               "content": "Đã ai được nhìn đâu mà biết", 
+               "isCorrect" : false
             }, 
             {
-               "content": "Sundar Pichai", 
+               "content": "Hình cầu có gai", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Trông như hình chiếc vương miện", 
                "isCorrect" : false
             },
 
             {
-               "content": "Eric Schmidt", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Ruth Porat", 
+               "content": "Trông như virus", 
                "isCorrect" : false
             }
          ]
       }, 
 
       {
-         "content": "Tính đến nay, Việt Nam trải qua bao nhiêu đợt dịch:",
+         "content": "Người bị bệnh Covid-19 có dâu hiệu, biểu hiện gì?",
          "answers" : [
             {
-               "content": "2", 
+               "content": "Dấu hiệu của việc sắp bị bế đi cách li", 
                "isCorrect" : false
             }, 
             {
-               "content": "3", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "4", 
+               "content": "Sốt,ho,đau họng, mệt mỏi", 
                "isCorrect" : true
             },
 
             {
-               "content": "1", 
+               "content": "Ngứa ngáy, khó chịu", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Táo bón", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Phương tiện nào được sử dụng trong bài hát “12 giờ”:",
+         "content": "Bộ y tế có đưa ra nguyên tắc gì để chống dịch covid?",
          "answers" : [
             {
-               "content": "xe máy", 
+               "content": "1K", 
                "isCorrect" : false
             }, 
             {
-               "content": "ô tô", 
+               "content": "2K", 
                "isCorrect" : false
             },
 
             {
-               "content": "máy bay", 
+               "content": "3K", 
                "isCorrect" : false
             },
 
             {
-               "content": "xe đạp", 
+               "content": "5K", 
                "isCorrect" : true
             }
          ]  
       },
 
       {
-         "content": "Khu vực Đông Nam Á gồm có bao nhiêu nước?",
+         "content": "Một trong những món đồ không thể thiếu khi ra đường thời covid?",
          "answers" : [
             {
-               "content": "10", 
+               "content": "Mũ", 
                "isCorrect" : false
             }, 
             {
-               "content": "11", 
+               "content": "Kính râm", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Khẩu trang", 
                "isCorrect" : true
             },
 
             {
-               "content": "12", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "13", 
+               "content": "Áo mưa", 
                "isCorrect" : false
             }
          ]  
       },
       {
-         "content": "Việt Nam gia nhập ASEAN năm nào:",
+         "content": "Virus Corona bắt nguồn từ quốc gia nào?",
          "answers" : [
             {
-               "content": "1998", 
+               "content": "Ấn Độ", 
                "isCorrect" : false
             }, 
             {
-               "content": "1997", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "1996", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "1995", 
+               "content": "Trung Của", 
                "isCorrect" : true
+            },
+
+            {
+               "content": "Cam pu chia", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Laos", 
+               "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Vacxin nào dưới đây là do Việt Nam chế tạo và phát triển: ",
+         "content": "Dịch covid 19 bắt đầu bùng nổ năm bao nhiêu?",
          "answers" : [
             {
-               "content": "Vero Cell", 
+               "content": "2018", 
                "isCorrect" : false
             }, 
             {
-               "content": "Astrazeneca", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Nano Covax", 
+               "content": "2019", 
                "isCorrect" : true
             },
 
             {
-               "content": "Pziefer", 
+               "content": "2020", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "2021", 
                "isCorrect" : false
             }
          ]  
       },
       {
-         "content": "2 con vịt đi trước 2 con vịt, 2 con vịt đi sau 2 con vịt, 2 con vịt đi giữa 2 con vịt. Hỏi có mấy con vịt?",
+         "content": "Dịch covid lan truyền bằng cách nào?",
          "answers" : [
             {
-               "content": "2", 
+               "content": "Truyền từ động vật sang người", 
                "isCorrect" : false
             }, 
             {
-               "content": "8", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "6", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "4", 
+               "content": "Truyền qua đường hô hấp", 
                "isCorrect" : true
+            },
+
+            {
+               "content": "Truyền qua không khí", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Truyền qua tiếp xúc không gần", 
+               "isCorrect" : false
             }
          ]  
       }
