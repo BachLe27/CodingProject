@@ -267,7 +267,6 @@ export class Lv4 extends Phaser.Scene {
       }
       this.player.setVelocity(x, y);
 
-
       if (this.game.registry.get('curQuestion') == this.game.registry.get('totalChest')) {
          this.keyLayer.visible = true;
          this.physics.add.collider(

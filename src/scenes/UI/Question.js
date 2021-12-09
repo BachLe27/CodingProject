@@ -157,7 +157,8 @@ export class Question extends Phaser.Scene {
       // Answer content
 
       const offsetX = 120, offsetY = 20;
-
+      const answers = this.shuffle(question.answers);
+      // console.log(answers);
       for (let i = 0; i < this.answerFrame.getLength(); i++) {
          let frame = this.answerFrame.getChildren(0)[i];
          let text = this.add.text(frame.x - offsetX, frame.y - offsetY, question.answers[i].content, answerFormat);
@@ -169,6 +170,25 @@ export class Question extends Phaser.Scene {
          }, this)
       }  
    }
+
+
+   shuffle(array) {
+      let currentIndex = array.length,  randomIndex;
+    
+      // While there remain elements to shuffle...
+      while (currentIndex != 0) {
+    
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+    
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex], array[currentIndex]];
+      }
+    
+      return array;
+    }
 
    getAnswer(isCorrect) {
       const noti = (isCorrect? "Đúng rồi" : "Trừ 5 giây");

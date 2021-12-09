@@ -321,5 +321,12 @@ export class Lv3 extends Phaser.Scene {
          }
          this.player.setVelocity(x, y);
       }
+      
+      if (this.game.registry.get('curQuestion') == this.game.registry.get('totalChest')) {
+         this.keyLayer.visible = true;
+         this.physics.add.collider(
+            this.player, this.keyLayer, (player, key) => this.getKey(key),
+         null, this);
+      }
    }
 }
