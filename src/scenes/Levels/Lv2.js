@@ -11,7 +11,7 @@ export class Lv2 extends Phaser.Scene {
     }
 
    create() {
-      
+      this.game.registry.set('stop', false);
       this.game.registry.set('time', 135);
       this.game.registry.set('running', true);
       this.game.registry.set('penalty', 0);
@@ -235,32 +235,34 @@ export class Lv2 extends Phaser.Scene {
 
    update() {
       // movement
-      var x = 0, y = 0;
-      const speed = 120;
-      if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
-         this.player.play("up");
-         y -= speed;
-      }
-      if ( (this.cursors["down"].isDown || this.cursors["s"].isDown) && this.player.active) {
-         this.player.play("down");
-         y += speed; 
-      }
-      if ( (this.cursors["right"].isDown || this.cursors["d"].isDown) && this.player.active) {
-         this.player.play("right");
-         x += speed;
-      }
-      if ( (this.cursors["left"].isDown || this.cursors["a"].isDown) && this.player.active) {
-         this.player.play("left");
-         x -= speed;
-      }
-      this.player.setVelocity(x, y);
+      if (this.game.registry.get('stop') == false) {
+         var x = 0, y = 0;
+         const speed = 120;
+         if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
+            this.player.play("up");
+            y -= speed;
+         }
+         if ( (this.cursors["down"].isDown || this.cursors["s"].isDown) && this.player.active) {
+            this.player.play("down");
+            y += speed; 
+         }
+         if ( (this.cursors["right"].isDown || this.cursors["d"].isDown) && this.player.active) {
+            this.player.play("right");
+            x += speed;
+         }
+         if ( (this.cursors["left"].isDown || this.cursors["a"].isDown) && this.player.active) {
+            this.player.play("left");
+            x -= speed;
+         }
+         this.player.setVelocity(x, y);
 
 
-      if (this.game.registry.get('curQuestion') == this.game.registry.get('totalChest')) {
-         this.keyLayer.visible = true;
-         this.physics.add.collider(
-            this.player, this.keyLayer, (player, key) => this.getKey(key),
-         null, this);
+         if (this.game.registry.get('curQuestion') == this.game.registry.get('totalChest')) {
+            this.keyLayer.visible = true;
+            this.physics.add.collider(
+               this.player, this.keyLayer, (player, key) => this.getKey(key),
+            null, this);
+         }
       }
    }
 }

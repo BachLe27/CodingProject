@@ -11,7 +11,7 @@ export class Lv4 extends Phaser.Scene {
     }
 
    create() {
-      
+      this.game.registry.set('stop', false);
       this.game.registry.set('time', 270);
       this.game.registry.set('running', true);
       this.game.registry.set('penalty', 0);

@@ -11,7 +11,7 @@ export class Lv3 extends Phaser.Scene {
     }
 
    create() {
-      
+      this.game.registry.set('stop', false);
       this.game.registry.set('time', 160);
       this.game.registry.set('running', true);
       this.game.registry.set('penalty', 0);
@@ -71,7 +71,8 @@ export class Lv3 extends Phaser.Scene {
       this.playerX = 64 + 16;
       this.playerY = 64 + 16;
 
-      this.player = this.physics.add.sprite(this.playerX, this.playerY - 5, 'female');
+      this.girl = this.physics.add.sprite(this.playerX , this.playerY, 'female');
+      this.player = this.physics.add.sprite(this.playerX, this.playerY - 5, 'male');
 
       this.player.active = true;
       this.haveKey = false;
@@ -105,6 +106,10 @@ export class Lv3 extends Phaser.Scene {
       this.physics.add.collider(this.player, this.groundLayer);
       this.physics.add.collider(this.player, this.maze);
       
+      this.physics.add.collider(this.girl, this.questionLayer);
+      this.physics.add.collider(this.girl, this.groundLayer);
+      this.physics.add.collider(this.girl, this.keyLayer);
+      this.physics.add.collider(this.girl, this.maze);
 
       this.physics.add.collider(this.player, this.questionLayer, 
          (player, chest) => {
@@ -240,32 +245,81 @@ export class Lv3 extends Phaser.Scene {
 
    update() {
       // movement
-      var x = 0, y = 0;
-      const speed = 120;
-      if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
-         this.player.play("up");
-         y -= speed;
-      }
-      if ( (this.cursors["down"].isDown || this.cursors["s"].isDown) && this.player.active) {
-         this.player.play("down");
-         y += speed; 
-      }
-      if ( (this.cursors["right"].isDown || this.cursors["d"].isDown) && this.player.active) {
-         this.player.play("right");
-         x += speed;
-      }
-      if ( (this.cursors["left"].isDown || this.cursors["a"].isDown) && this.player.active) {
-         this.player.play("left");
-         x -= speed;
-      }
-      this.player.setVelocity(x, y);
+      if (this.game.registry.get('stop') == false) {
+         var x = 0, y = 0;
+         const speed = 120;
+         if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
+            this.player.play("m-up");
 
+            y -= speed;
 
-      if (this.game.registry.get('curQuestion') == this.game.registry.get('totalChest')) {
-         this.keyLayer.visible = true;
-         this.physics.add.collider(
-            this.player, this.keyLayer, (player, key) => this.getKey(key),
-         null, this);
+            this.tweens.add({
+               targets: this.girl,
+               duration: 500,
+               y: this.player.y,
+               onStart: function() {
+                  this.girl.play("up");
+               },
+               onCompleteScope: this,
+               onStartScope: this,
+            })
+         }
+         if ( (this.cursors["down"].isDown || this.cursors["s"].isDown) && this.player.active) {
+            this.player.play("m-down");
+
+            y += speed; 
+
+            this.tweens.add({
+               targets: this.girl,
+               duration: 500,
+               y: this.player.y,
+               onStart: function() {
+                  this.girl.play("down");
+               },
+               onCompleteScope: this,
+               onStartScope: this,
+            })
+
+         }
+         if ( (this.cursors["right"].isDown || this.cursors["d"].isDown) && this.player.active) {
+            this.player.play("m-right");
+
+            x += speed;
+
+            this.tweens.add({
+               targets: this.girl,
+               duration: 500,
+               x: this.player.x,
+               // onStart: function() {
+               //    this.girl.setVelocity(x, y);
+               // },
+               onStart: function() {
+                  this.girl.play("right");
+               },
+               onCompleteScope: this,
+               onStartScope: this,
+            })
+         }
+         if ( (this.cursors["left"].isDown || this.cursors["a"].isDown) && this.player.active) {
+            this.player.play("m-left");
+
+            x -= speed;
+
+            this.tweens.add({
+               targets: this.girl,
+               duration: 500,
+               x: this.player.x,
+               // onStart: function() {
+               //    this.girl.setVelocity(x, y);
+               // },
+               onComplete: function() {
+                  this.girl.play("left");
+               },
+               onCompleteScope: this,
+               onStartScope: this,
+            })
+         }
+         this.player.setVelocity(x, y);
       }
    }
 }
