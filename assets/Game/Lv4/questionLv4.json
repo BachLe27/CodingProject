@@ -1,339 +1,338 @@
+
 {
    "questions": [
       {
-         "content": "Ai là người giành quả bóng vàng 2021?",
+         "content": "Gen 9 Câu lạc bộ JS có ai là fuckgirl?",
          "answers" : [
             {
-               "content": "Neymar", 
+               "content": "Cả An và Hà", 
                "isCorrect" : false
             }, 
             {
-               "content": "Ronaldo", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Lewandowski", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Messi", 
+               "content": "Cả An và Hà", 
                "isCorrect" : true
+            },
+
+            {
+               "content": "Nguyễn Thị An", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Vũ Hải Lâm", 
+               "isCorrect" : false
             }
          ]
       }, 
 
       {
-         "content": "Đội tuyển quốc gia Việt Nam vừa có kết quả như nào với đội tuyển Lào trong giải AFF Cup 2020 ngày 6/12",
+         "content": "Trap girl của JS là ai?",
          "answers" : [
             {
-               "content": "2-2", 
+               "content": "Vũ Thị Hà", 
                "isCorrect" : false
             }, 
             {
-               "content": "2-1", 
+               "content": "Lê Thanh Bình", 
                "isCorrect" : false
             },
 
             {
-               "content": "2-0", 
+               "content": "Nguyễn Thị An", 
                "isCorrect" : true
             },
 
             {
-               "content": "1-1", 
+               "content": "Cả An và Bình", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Đâu là đội bóng vô địch giải C1 2020",
+         "content": "Ai là người đang cầm đầu CLB JS?",
          "answers" : [
             {
-               "content": "PSG", 
+               "content": "Khuất Mạnh Hoàng", 
                "isCorrect" : false
             }, 
             {
-               "content": "Bayern Munich", 
+               "content": "Lê Thanh Bình", 
                "isCorrect" : true
             },
 
             {
-               "content": "Mancity", 
+               "content": "Phan Trường Giang", 
                "isCorrect" : false
             },
 
             {
-               "content": "Barcelona ", 
+               "content": "Vũ Hải Lâm", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Ai trong những người dưới đây gi bàn trong trận Việt Nam vs Lào",
+         "content": "JS Club được thành lập vào năm bao nhiêu?",
          "answers" : [
             {
-               "content": "Phan Văn Đức", 
-               "isCorrect" : true
+               "content": "2011", 
+               "isCorrect" : false
             }, 
             {
-               "content": "Nguyễn Tiến Linh", 
+               "content": "2012", 
                "isCorrect" : false
             },
 
             {
-               "content": "Nguyễn Phong Hồng Duy", 
+               "content": "2013", 
                "isCorrect" : false
             },
 
             {
-               "content": "Trần Minh Vương", 
+               "content": "2014", 
+               "isCorrect" : true
+            }
+         ]  
+      },
+      {
+         "content": "Cóc Vàng kì SUMMER 2021 đã gọi tên thành viên nào trong CLB JS?",
+         "answers" : [
+            {
+               "content": "Hoàng Mạnh Khuất", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Lê Thanh Bình", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Cao Quốc Dũng", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Phạm Bằng Hữu", 
                "isCorrect" : false
             }
          ]  
       },
       {
-         "content": "Erling Haaland thi đấu ở câu lạc bộ nào?",
+         "content": "Kỳ tuyển quân tới của JS Club là gen?",
          "answers" : [
             {
-               "content": "Manchester City", 
+               "content": "8", 
                "isCorrect" : false
             }, 
             {
-               "content": "Dortmund", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Liverpool", 
+               "content": "9", 
                "isCorrect" : false
             },
 
             {
-               "content": "PSG", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-
-      {
-         "content": "Quế Ngọc Hải đá chính ở vị trí nào trong đội hình quốc gia?",
-         "answers" : [
-            {
-               "content": "Tiền đạo", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Tiền vệ", 
+               "content": "11", 
                "isCorrect" : false
             },
 
             {
-               "content": "Trung vệ", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Hậu vệ", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-
-      {
-         "content": "Hiện tại đội tuyển quốc gia Việt Nam xếp thứ bao nhiêu trên bảng xếp hạng bóng đá thế giới",
-         "answers" : [
-            {
-               "content": "99", 
-               "isCorrect" : true
-            }, 
-            {
-               "content": "97", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "103", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "90", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-
-      {
-         "content": "Đội bóng nào vô địch ngoại hạng Anh 2021?",
-         "answers" : [
-            {
-               "content": "ManCity", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": " Liverpool", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Mu", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Chelsea", 
+               "content": "10", 
                "isCorrect" : true
             }
          ]  
       },
 
       {
-         "content": "Đội bóng nào vô địch giải La Liga 2019?",
+         "content": "Họ tên đầy đủ của Chủ nhiệm Gen 8 CLB JS là?",
          "answers" : [
             {
-               "content": "Barca", 
+               "content": "Khuất Mạnh Hoàng", 
                "isCorrect" : false
             }, 
             {
-               "content": "Real Madrid", 
+               "content": "Hoàng Mạnh Khuất", 
                "isCorrect" : true
             },
 
             {
-               "content": "Atletico", 
+               "content": "Đinh Phương Thảo", 
                "isCorrect" : false
             },
 
             {
-               "content": "Valencia", 
+               "content": "Phan Trường Giang", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Kết quả giữa trận PSG và Man City gần đây là",
+         "content": "Tại sao VHL vẫn chưa có người yêu?",
          "answers" : [
             {
-               "content": "MC 2-0 PSG", 
+               "content": "Vì xấu", 
                "isCorrect" : false
             }, 
             {
-               "content": "MC 2-1 PSG", 
+               "content": "Học nhiều quá", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Chưa muốn yêu", 
                "isCorrect" : true
             },
 
             {
-               "content": "MC 3-2 PSG", 
+               "content": "Không ai yêu", 
+               "isCorrect" : false
+            }
+         ]  
+      }, 
+
+
+      {
+         "content": "Thành viên JS nào dưới đây chưa có cóc vàng?",
+         "answers" : [
+            {
+               "content": "Lê Duy Cương", 
+               "isCorrect" : true
+            }, 
+            {
+               "content": "Nguyễn Việt Long", 
                "isCorrect" : false
             },
 
             {
-               "content": "MC 1-0 PSG", 
+               "content": "Hoàng Mạnh Khuất", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Cao Quốc Dũng", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Kết quả giữa trận MU và Arsenal gần đây là",
+         "content": "Team thu họ của JS Club thuộc ban nào?",
          "answers" : [
             {
-               "content": "MU 3-1 Arsenal", 
+               "content": "Truyền thông", 
                "isCorrect" : false
             }, 
             {
-               "content": "MU 1-2 Arsenal", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "MU 3-2 Arsenal", 
+               "content": "Văn hóa", 
                "isCorrect" : true
             },
 
             {
-               "content": "MU 2-0 Arsenal", 
+               "content": "Đối ngoại", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Chuyên môn", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+      {
+         "content": "Thành viên JS nào dưới đây vẫn chưa có người yêu?",
+         "answers" : [
+            {
+               "content": "Hoàng Mạnh Khuất", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Trần Thị Thao", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Nguyễn Thị Vân", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Vũ Hải Lâm", 
+               "isCorrect" : true
+            }
+
+         ]  
+      },
+
+      {
+         "content": "JS Club có tất cả bao nhiêu ban?",
+         "answers" : [
+            {
+               "content": "5", 
+               "isCorrect" : true
+            }, 
+            {
+               "content": "4", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "3", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "2", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Hiện tại Zlatan Ibrahimovic thi đấu cho đội tuyển nào?",
+         "content": "Tham vọng lớn nhất của ban Chuyên môn JS là gì?",
          "answers" : [
             {
-               "content": "Đức", 
+               "content": "Cóc vàng", 
                "isCorrect" : false
             }, 
             {
-               "content": "Thụy Điển", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Brazil", 
+               "content": "Có người yêu", 
                "isCorrect" : false
             },
 
             {
-               "content": "Scotland", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-
-      {
-         "content": "Năm nay Cristiano Ronaldo bao nhiêu tuổi?",
-         "answers" : [
-            {
-               "content": "30", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "32", 
+               "content": "Có thêm thành viên nữ", 
                "isCorrect" : false
             },
 
             {
-               "content": "38", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "36", 
+               "content": "Có người yêu và có thêm thành viên nữ", 
                "isCorrect" : true
             }
          ]  
       },
 
       {
-         "content": "CLB nào đoạt giải CLB hay nhất năm trong 2021?",
+         "content": "Chúa tể meme, ông hoàng panik là biệt danh của ai trong JS Club?",
          "answers" : [
             {
-               "content": "PSG", 
+               "content": "Lê Duy Cương", 
                "isCorrect" : false
             }, 
             {
-               "content": "Chelsea", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "MU", 
+               "content": "Vũ Hải Lâm", 
                "isCorrect" : false
             },
 
             {
-               "content": "MC", 
+               "content": "Lê Thanh Bình", 
+               "isCorrect" : true
+            },
+            {
+               "content": "Kiên CT", 
                "isCorrect" : false
             }
          ]  
       }
-
    ]
 }

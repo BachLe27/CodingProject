@@ -21,9 +21,11 @@ import { Story5 } from './scenes/Stories/Story5.js'
 
 import {Question} from './scenes/UI/Question.js';
 import {Quest} from './scenes/UI/Quest.js';
+import {Mystery} from './scenes/UI/Mystery.js';
 import {Tutorial} from './scenes/UI/Tutorial.js';
 import {Timer} from './scenes/UI/Timer.js';
 import {GameOver} from './scenes/UI/GameOver.js';
+import {Congrats} from './scenes/UI/Congrats.js';
 
 var config = {
    type: Phaser.AUTO,
@@ -32,14 +34,13 @@ var config = {
    backgroundColor: 0x000000,
    scene: [
       MainMenu, 
-      Story1, 
-      LoadScene, 
+      Story1, LoadScene, 
       Lv1, Story2, 
       Lv2, Story3,
       Lv3, Story4, 
       Lv4, Story5, 
       LastScene, HighScore, 
-      SoundButton, Question, Quest, Tutorial, Timer, GameOver
+      SoundButton, Question, Quest, Mystery, Tutorial, Timer, GameOver, Congrats
    ],
    // scene:[Test, Gui],
 

@@ -92,6 +92,7 @@ export class Lv4 extends Phaser.Scene {
       this.questionLayer = this.map.createLayer('chest', chest);
       this.maze = this.map.createLayer('maze', terrain);
       this.keyLayer = this.map.createLayer('key', key);
+      this.itemLayer = this.map.createLayer('item', chest);
 
       this.keyLayer.visible = false;
    }
@@ -101,11 +102,25 @@ export class Lv4 extends Phaser.Scene {
       this.questionLayer.setCollisionByProperty({collides: true});
       this.keyLayer.setCollisionByProperty({collides: true});
       this.maze.setCollisionByProperty({collides: true});
+      this.itemLayer.setCollisionByProperty({collides: true});
 
       this.physics.add.collider(this.player, this.groundLayer);
-      this.physics.add.collider(this.player, this.maze);
-      
+      var mazecollider = this.physics.add.collider(this.player, this.maze);
 
+      this.physics.add.collider(this.player, this.itemLayer, (player, item) => {
+         this.scene.launch('Mystery', 
+         {
+            myCam: this.myCam,
+            cameras: this.cameras,
+            player: this.player,
+            map: this.map,
+            layer: this.itemLayer,
+            chest: item,
+            maze: this.maze,
+            collider: mazecollider,
+         }, this);
+      }, null, this);
+      
       this.physics.add.collider(this.player, this.questionLayer, 
          (player, chest) => {
             this.scene.launch('Question', {
@@ -161,20 +176,7 @@ export class Lv4 extends Phaser.Scene {
    }
 
    createVirus() {
-      // this.virus = this.physics.add.sprite(64 + 16, 64 + 48, 'virus');
-      // this.virus.play('move');
-
-      // this.virus.setBounce(1);
-
-      // this.physics.add.collider(this.virus, this.maze);
       
-      // this.physics.add.collider(this.player, this.virus, (player, virus) => {
-      //    this.hurtPlayer(player);
-      //    this.move(virus);
-      // });
-
-      // this.move(this.virus);
-
       var spawn = [
          {
             x: 560, 
@@ -197,7 +199,7 @@ export class Lv4 extends Phaser.Scene {
          {
             x: 320,
             y: 384,
-            vX: 70,
+            vX: 40,
             vY: 0,
          }, 
          {

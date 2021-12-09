@@ -58,7 +58,6 @@ export class Question extends Phaser.Scene {
                "Bạn đã tìm được tung tích của kẻ tạo ra virus..." 
             ];
 
-
             const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti[this.level - 1], notiFormat);
             
             const btn = this.add.image(460, 355, 'btn').setScale(0.6).setOrigin(0, 0);

@@ -1,6 +1,78 @@
 {
    "questions": [
       {
+         "content": "Virus SAR-CoV-2 trông như thế nào?",
+         "answers" : [
+            {
+               "content": "Đã ai được nhìn đâu mà biết", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Hình cầu có gai", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Trông như hình chiếc vương miện", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Trông như virus", 
+               "isCorrect" : false
+            }
+         ]
+      }, 
+
+      {
+         "content": "Người bị bệnh Covid-19 có dâu hiệu, biểu hiện gì?",
+         "answers" : [
+            {
+               "content": "Dấu hiệu của việc sắp bị bế đi cách li", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Sốt,ho,đau họng, mệt mỏi", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Ngứa ngáy, khó chịu", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Táo bón", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Bộ y tế có đưa ra nguyên tắc gì để chống dịch covid?",
+         "answers" : [
+            {
+               "content": "1K", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "2K", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "3K", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "5K", 
+               "isCorrect" : true
+            }
+         ]  
+      },
+
+      {
          "content": "Một trong những món đồ không thể thiếu khi ra đường thời covid?",
          "answers" : [
             {
@@ -8,7 +80,7 @@
                "isCorrect" : false
             }, 
             {
-               "content": "Khăn quàng cổ", 
+               "content": "Kính râm", 
                "isCorrect" : false
             },
 
@@ -18,126 +90,77 @@
             },
 
             {
-               "content": "Kính râm", 
-               "isCorrect" : false
-            }
-         ]
-      }, 
-
-      {
-         "content": "Bộ y tế có đưa ra quy tắc gì để phòng chống dịch covid?",
-         "answers" : [
-            {
-               "content": "24k", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "3k", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "5k", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "4k", 
+               "content": "Áo mưa", 
                "isCorrect" : false
             }
          ]  
       },
-
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
+         "content": "Virus Corona bắt nguồn từ quốc gia nào?",
          "answers" : [
-            {
-               "content": "Khuất Mạnh Hoàng", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Phan Trường Giang", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Vũ Hải Lâm", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-
-      {
-         "content": "Virus corona bắt nguồn từ quốc gia nào?",
-         "answers" : [
-            {
-               "content": "Việt Nam", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Hàn Quốc", 
-               "isCorrect" : false
-            },
-
             {
                "content": "Ấn Độ", 
                "isCorrect" : false
-            },
-
-            {
-               "content": "Trung Quốc", 
-               "isCorrect" : true
-            }
-         ]  
-      },
-      {
-         "content": "Cóc Vàng kì SUMMER 2021 đã gọi tên thành viên nào trong CLB JS?",
-         "answers" : [
-            {
-               "content": "Hoàng Mạnh Khuất", 
-               "isCorrect" : false
             }, 
             {
-               "content": "Lê Thanh Bình", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Cao Quốc Dũng", 
+               "content": "Trung Của", 
                "isCorrect" : true
             },
 
             {
-               "content": "Phạm Bằng Hữu", 
+               "content": "Cam pu chia", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Laos", 
                "isCorrect" : false
             }
          ]  
       },
 
       {
-         "content": "Ai là người đang cầm đầu CLB JS?",
+         "content": "Dịch covid 19 bắt đầu bùng nổ năm bao nhiêu?",
          "answers" : [
             {
-               "content": "Khuất Mạnh Hoàng", 
+               "content": "2018", 
                "isCorrect" : false
             }, 
             {
-               "content": "Lê Thanh Bình", 
+               "content": "2019", 
                "isCorrect" : true
             },
 
             {
-               "content": "Phan Trường Giang", 
+               "content": "2020", 
                "isCorrect" : false
             },
 
             {
-               "content": "Vũ Hải Lâm", 
+               "content": "2021", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+      {
+         "content": "Dịch covid lan truyền bằng cách nào?",
+         "answers" : [
+            {
+               "content": "Truyền từ động vật sang người", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Truyền qua đường hô hấp", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Truyền qua không khí", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Truyền qua tiếp xúc không gần", 
                "isCorrect" : false
             }
          ]  
@@ -145,3 +168,5 @@
 
    ]
 }
+
+

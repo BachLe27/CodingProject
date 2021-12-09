@@ -104,20 +104,7 @@ export class Lv1 extends Phaser.Scene {
    }
 
    createVirus() {
-      // this.virus = this.physics.add.sprite(64 + 16, 64 + 48, 'virus');
-      // this.virus.play('move');
-
-      // this.virus.setBounce(1);
-
-      // this.physics.add.collider(this.virus, this.maze);
       
-      // this.physics.add.collider(this.player, this.virus, (player, virus) => {
-      //    this.hurtPlayer(player);
-      //    this.move(virus);
-      // });
-
-      // this.move(this.virus);
-
       var spawn = [
          {
             x: 184, 
@@ -164,6 +151,7 @@ export class Lv1 extends Phaser.Scene {
 
       this.player.active = true;
       this.haveKey = false;
+      this.player.speed = 120;
 
       this.myCam = this.cameras.main;
       this.myCam.startFollow(this.player);
@@ -181,6 +169,7 @@ export class Lv1 extends Phaser.Scene {
       this.maze = this.map.createLayer('maze', terrain);
       this.questionLayer = this.map.createLayer('chest', chest);
       this.keyLayer = this.map.createLayer('key', key);
+      this.itemLayer = this.map.createLayer('item', chest);
 
       this.keyLayer.visible = false;
    }
@@ -190,9 +179,23 @@ export class Lv1 extends Phaser.Scene {
       this.questionLayer.setCollisionByProperty({collides: true});
       this.keyLayer.setCollisionByProperty({collides: true});
       this.maze.setCollisionByProperty({collides: true});
+      this.itemLayer.setCollisionByProperty({collides: true});
 
       this.physics.add.collider(this.player, this.groundLayer);
-      this.physics.add.collider(this.player, this.maze);
+      var mazecollider = this.physics.add.collider(this.player, this.maze);
+      this.physics.add.collider(this.player, this.itemLayer, (player, item) => {
+         this.scene.launch('Mystery', 
+         {
+            myCam: this.myCam,
+            cameras: this.cameras,
+            player: this.player,
+            map: this.map,
+            layer: this.itemLayer,
+            chest: item,
+            maze: this.maze,
+            collider: mazecollider,
+         }, this);
+      }, null, this);
       
 
       this.physics.add.collider(this.player, this.questionLayer, 
@@ -236,7 +239,7 @@ export class Lv1 extends Phaser.Scene {
       // movement
       if (this.game.registry.get('stop') == false) {
          var x = 0, y = 0;
-         const speed = 120;
+         var speed = this.player.speed;
          if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
             this.player.play("up");
             y -= speed;

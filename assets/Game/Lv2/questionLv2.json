@@ -1,256 +1,341 @@
 {
    "questions": [
       {
-         "content": "Năm thành lập trường?",
-         "answers": [
+         "content": "Ai là người giành quả bóng vàng 2021?",
+         "answers" : [
             {
-               "content": "2004",
-               "isCorrect": false
+               "content": "Neymar", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Ronaldo", 
+               "isCorrect" : false
             },
+
             {
-               "content": "2005",
-               "isCorrect": false
+               "content": "Lewandowski", 
+               "isCorrect" : false
             },
+
             {
-               "content": "2006",
-               "isCorrect": true
-            },
-            {
-               "content": "2003",
-               "isCorrect": false
+               "content": "Messi", 
+               "isCorrect" : true
             }
          ]
+      }, 
+
+      {
+         "content": "Đội tuyển quốc gia Việt Nam vừa có kết quả như nào với đội tuyển Lào trong giải AFF Cup 2020 ngày 6/12",
+         "answers" : [
+            {
+               "content": "2-2", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "2-1", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "2-0", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "1-1", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Đâu là đội bóng vô địch giải C1 2020",
+         "answers" : [
+            {
+               "content": "PSG", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Bayern Munich", 
+               "isCorrect" : true
+            },
+
+            {
+               "content": "Mancity", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Barcelona ", 
+               "isCorrect" : false
+            }
+         ]  
+      },
+
+      {
+         "content": "Ai trong những người dưới đây gi bàn trong trận Việt Nam vs Lào",
+         "answers" : [
+            {
+               "content": "Phan Văn Đức", 
+               "isCorrect" : true
+            }, 
+            {
+               "content": "Nguyễn Tiến Linh", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Nguyễn Phong Hồng Duy", 
+               "isCorrect" : false
+            },
+
+            {
+               "content": "Trần Minh Vương", 
+               "isCorrect" : false
+            }
+         ]  
       },
       {
-         "content": "Trường có mấy tòa học?",
-         "answers": [
+         "content": "Erling Haaland thi đấu ở câu lạc bộ nào?",
+         "answers" : [
             {
-               "content": "2",
-               "isCorrect": false
+               "content": "Manchester City", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Dortmund", 
+               "isCorrect" : true
             },
+
             {
-               "content": "4",
-               "isCorrect": true
+               "content": "Liverpool", 
+               "isCorrect" : false
             },
+
             {
-               "content": "3",
-               "isCorrect": false
-            },
-            {
-               "content": "5",
-               "isCorrect": false
+               "content": "PSG", 
+               "isCorrect" : false
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Linh vật của đại học FPT?",
-         "answers": [
+         "content": "Quế Ngọc Hải đá chính ở vị trí nào trong đội hình quốc gia?",
+         "answers" : [
             {
-               "content": "Gà",
-               "isCorrect": false
+               "content": "Tiền đạo", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Tiền vệ", 
+               "isCorrect" : false
             },
+
             {
-               "content": "Ngỗng",
-               "isCorrect": false
+               "content": "Trung vệ", 
+               "isCorrect" : true
             },
+
             {
-               "content": "Rồng",
-               "isCorrect": false
-            },
-            {
-               "content": "Cóc",
-               "isCorrect": true
+               "content": "Hậu vệ", 
+               "isCorrect" : false
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Nhật ký sinh viên FPTU tên là gì?",
-         "answers": [
+         "content": "Hiện tại đội tuyển quốc gia Việt Nam xếp thứ bao nhiêu trên bảng xếp hạng bóng đá thế giới",
+         "answers" : [
             {
-               "content": "FPT Alumni Book ",
-               "isCorrect": false
+               "content": "99", 
+               "isCorrect" : true
+            }, 
+            {
+               "content": "97", 
+               "isCorrect" : false
             },
+
             {
-               "content": "FPTU Alumni Book",
-               "isCorrect": true
+               "content": "103", 
+               "isCorrect" : false
             },
+
             {
-               "content": "FPT Alumni Book",
-               "isCorrect": false
-            },
-            {
-               "content": "FPTU Alumni",
-               "isCorrect": false
+               "content": "90", 
+               "isCorrect" : false
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Tòa nào có trống đồng?",
-         "answers": [
+         "content": "Đội bóng nào vô địch ngoại hạng Anh 2021?",
+         "answers" : [
             {
-               "content": "Delta",
-               "isCorrect": false
+               "content": "ManCity", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": " Liverpool", 
+               "isCorrect" : false
             },
+
             {
-               "content": "Beta",
-               "isCorrect": true
+               "content": "Mu", 
+               "isCorrect" : false
             },
+
             {
-               "content": "Gamma",
-               "isCorrect": false
-            },
-            {
-               "content": "Alpha",
-               "isCorrect": false
+               "content": "Chelsea", 
+               "isCorrect" : true
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Nam cóc vàng duy nhất kỳ Summer 2021 là ai?",
-         "answers": [
+         "content": "Đội bóng nào vô địch giải La Liga 2019?",
+         "answers" : [
             {
-               "content": "Lê Thanh Bình",
-               "isCorrect": false
+               "content": "Barca", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Real Madrid", 
+               "isCorrect" : true
             },
+
             {
-               "content": "Cao Quốc Dũng",
-               "isCorrect": true
+               "content": "Atletico", 
+               "isCorrect" : false
             },
+
             {
-               "content": "Vũ Hải Lâm",
-               "isCorrect": false
-            },
-            {
-               "content": "Lê Bảo Bình",
-               "isCorrect": false
+               "content": "Valencia", 
+               "isCorrect" : false
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Tòa nào có trống đồng?",
-         "answers": [
+         "content": "Kết quả giữa trận PSG và Man City gần đây là",
+         "answers" : [
             {
-               "content": "Delta",
-               "isCorrect": false
+               "content": "MC 2-0 PSG", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "MC 2-1 PSG", 
+               "isCorrect" : true
             },
+
             {
-               "content": "Beta",
-               "isCorrect": true
+               "content": "MC 3-2 PSG", 
+               "isCorrect" : false
             },
+
             {
-               "content": "Gamma",
-               "isCorrect": false
-            },
-            {
-               "content": "Alpha",
-               "isCorrect": false
+               "content": "MC 1-0 PSG", 
+               "isCorrect" : false
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Sơn Tùng - MTP biểu diễn tại FPTU HN vào năm bao nhiêu?",
-         "answers": [
+         "content": "Kết quả giữa trận MU và Arsenal gần đây là",
+         "answers" : [
             {
-               "content": "2017",
-               "isCorrect": false
+               "content": "MU 3-1 Arsenal", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "MU 1-2 Arsenal", 
+               "isCorrect" : false
             },
+
             {
-               "content": "2019",
-               "isCorrect": true
+               "content": "MU 3-2 Arsenal", 
+               "isCorrect" : true
             },
+
             {
-               "content": "2018",
-               "isCorrect": false
-            },
-            {
-               "content": "2020",
-               "isCorrect": false
+               "content": "MU 2-0 Arsenal", 
+               "isCorrect" : false
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Lần đầu tiên trong lịch sử FPTU HN thật sự dừng tuyển sinh là vào năm nào??",
-         "answers": [
+         "content": "Hiện tại Zlatan Ibrahimovic thi đấu cho đội tuyển nào?",
+         "answers" : [
             {
-               "content": "2020",
-               "isCorrect": false
+               "content": "Đức", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Thụy Điển", 
+               "isCorrect" : true
             },
+
             {
-               "content": "2021",
-               "isCorrect": true
+               "content": "Brazil", 
+               "isCorrect" : false
             },
+
             {
-               "content": "2019",
-               "isCorrect": false
-            },
-            {
-               "content": "2018",
-               "isCorrect": false
+               "content": "Scotland", 
+               "isCorrect" : false
             }
-         ]
+         ]  
       },
+
       {
-         "content": "FPTU HN chi gần 100 tỷ mua vacxin tiêm miễn phí cho toàn bộ học sinh, sinh viên và giảng viên vào thời gian nào?",
-         "answers": [
+         "content": "Năm nay Cristiano Ronaldo bao nhiêu tuổi?",
+         "answers" : [
             {
-               "content": "19/12/2020",
-               "isCorrect": false
+               "content": "30", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "32", 
+               "isCorrect" : false
             },
+
             {
-               "content": "19/02/2021",
-               "isCorrect": true
+               "content": "38", 
+               "isCorrect" : false
             },
+
             {
-               "content": "07/07/2020",
-               "isCorrect": false
-            },
-            {
-               "content": "21/7/2021",
-               "isCorrect": false
+               "content": "36", 
+               "isCorrect" : true
             }
-         ]
+         ]  
       },
+
       {
-         "content": "Hiệu trưởng trường FPT tên là?",
-         "answers": [
+         "content": "CLB nào đoạt giải CLB hay nhất năm trong 2021?",
+         "answers" : [
             {
-               "content": "Nguyễn Văn Thành",
-               "isCorrect": false
+               "content": "PSG", 
+               "isCorrect" : false
+            }, 
+            {
+               "content": "Chelsea", 
+               "isCorrect" : true
             },
+
             {
-               "content": "Nguyễn Khắc Thành",
-               "isCorrect": true
+               "content": "MU", 
+               "isCorrect" : false
             },
+
             {
-               "content": "Nguyễn Khắc Hoàng",
-               "isCorrect": false
-            },
-            {
-               "content": "Nguyễn Việt Thành",
-               "isCorrect": false
+               "content": "MC", 
+               "isCorrect" : false
             }
-         ]
-      },
-      {
-         "content": "ĐH FPT có mấy cơ sở?",
-         "answers": [
-            {
-               "content": "3",
-               "isCorrect": false
-            },
-            {
-               "content": "5",
-               "isCorrect": true
-            },
-            {
-               "content": "4",
-               "isCorrect": false
-            },
-            {
-               "content": "6",
-               "isCorrect": false
-            }
-         ]
+         ]  
       }
+
    ]
 }
+
+

@@ -1,170 +1,258 @@
-{
+
+{ 
    "questions": [
       {
-         "content": "Virus SAR-CoV-2 trông như thế nào?",
-         "answers" : [
+         "content": "Năm thành lập trường?",
+         "answers": [
             {
-               "content": "Đã ai được nhìn đâu mà biết", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Hình cầu có gai", 
-               "isCorrect" : true
+               "content": "2004",
+               "isCorrect": false
             },
-
             {
-               "content": "Trông như hình chiếc vương miện", 
-               "isCorrect" : false
+               "content": "2005",
+               "isCorrect": false
             },
-
             {
-               "content": "Trông như virus", 
-               "isCorrect" : false
+               "content": "2006",
+               "isCorrect": true
+            },
+            {
+               "content": "2003",
+               "isCorrect": false
             }
          ]
-      }, 
-
-      {
-         "content": "Người bị bệnh Covid-19 có dâu hiệu, biểu hiện gì?",
-         "answers" : [
-            {
-               "content": "Dấu hiệu của việc sắp bị bế đi cách li", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Sốt,ho,đau họng, mệt mỏi", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Ngứa ngáy, khó chịu", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Táo bón", 
-               "isCorrect" : false
-            }
-         ]  
-      },
-
-      {
-         "content": "Bộ y tế có đưa ra nguyên tắc gì để chống dịch covid?",
-         "answers" : [
-            {
-               "content": "1K", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "2K", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "3K", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "5K", 
-               "isCorrect" : true
-            }
-         ]  
-      },
-
-      {
-         "content": "Một trong những món đồ không thể thiếu khi ra đường thời covid?",
-         "answers" : [
-            {
-               "content": "Mũ", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Kính râm", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "Khẩu trang", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "Áo mưa", 
-               "isCorrect" : false
-            }
-         ]  
       },
       {
-         "content": "Virus Corona bắt nguồn từ quốc gia nào?",
-         "answers" : [
+         "content": "Trường có mấy tòa học?",
+         "answers": [
             {
-               "content": "Ấn Độ", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Trung Của", 
-               "isCorrect" : true
+               "content": "2",
+               "isCorrect": false
             },
-
             {
-               "content": "Cam pu chia", 
-               "isCorrect" : false
+               "content": "4",
+               "isCorrect": true
             },
-
             {
-               "content": "Laos", 
-               "isCorrect" : false
+               "content": "3",
+               "isCorrect": false
+            },
+            {
+               "content": "5",
+               "isCorrect": false
             }
-         ]  
-      },
-
-      {
-         "content": "Dịch covid 19 bắt đầu bùng nổ năm bao nhiêu?",
-         "answers" : [
-            {
-               "content": "2018", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "2019", 
-               "isCorrect" : true
-            },
-
-            {
-               "content": "2020", 
-               "isCorrect" : false
-            },
-
-            {
-               "content": "2021", 
-               "isCorrect" : false
-            }
-         ]  
+         ]
       },
       {
-         "content": "Dịch covid lan truyền bằng cách nào?",
-         "answers" : [
+         "content": "Linh vật của đại học FPT?",
+         "answers": [
             {
-               "content": "Truyền từ động vật sang người", 
-               "isCorrect" : false
-            }, 
-            {
-               "content": "Truyền qua đường hô hấp", 
-               "isCorrect" : true
+               "content": "Gà",
+               "isCorrect": false
             },
-
             {
-               "content": "Truyền qua không khí", 
-               "isCorrect" : false
+               "content": "Ngỗng",
+               "isCorrect": false
             },
-
             {
-               "content": "Truyền qua tiếp xúc không gần", 
-               "isCorrect" : false
+               "content": "Rồng",
+               "isCorrect": false
+            },
+            {
+               "content": "Cóc",
+               "isCorrect": true
             }
-         ]  
+         ]
+      },
+      {
+         "content": "Nhật ký sinh viên FPTU tên là gì?",
+         "answers": [
+            {
+               "content": "FPT Alumni Book ",
+               "isCorrect": false
+            },
+            {
+               "content": "FPTU Alumni Book",
+               "isCorrect": true
+            },
+            {
+               "content": "FPT Alumni Book",
+               "isCorrect": false
+            },
+            {
+               "content": "FPTU Alumni",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "Tòa nào có trống đồng?",
+         "answers": [
+            {
+               "content": "Delta",
+               "isCorrect": false
+            },
+            {
+               "content": "Beta",
+               "isCorrect": true
+            },
+            {
+               "content": "Gamma",
+               "isCorrect": false
+            },
+            {
+               "content": "Alpha",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "Nam cóc vàng duy nhất kỳ Summer 2021 là ai?",
+         "answers": [
+            {
+               "content": "Lê Thanh Bình",
+               "isCorrect": false
+            },
+            {
+               "content": "Cao Quốc Dũng",
+               "isCorrect": true
+            },
+            {
+               "content": "Vũ Hải Lâm",
+               "isCorrect": false
+            },
+            {
+               "content": "Lê Bảo Bình",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "Tòa nào có trống đồng?",
+         "answers": [
+            {
+               "content": "Delta",
+               "isCorrect": false
+            },
+            {
+               "content": "Beta",
+               "isCorrect": true
+            },
+            {
+               "content": "Gamma",
+               "isCorrect": false
+            },
+            {
+               "content": "Alpha",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "Sơn Tùng - MTP biểu diễn tại FPTU HN vào năm bao nhiêu?",
+         "answers": [
+            {
+               "content": "2017",
+               "isCorrect": false
+            },
+            {
+               "content": "2019",
+               "isCorrect": true
+            },
+            {
+               "content": "2018",
+               "isCorrect": false
+            },
+            {
+               "content": "2020",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "Lần đầu tiên trong lịch sử FPTU HN thật sự dừng tuyển sinh là vào năm nào??",
+         "answers": [
+            {
+               "content": "2020",
+               "isCorrect": false
+            },
+            {
+               "content": "2021",
+               "isCorrect": true
+            },
+            {
+               "content": "2019",
+               "isCorrect": false
+            },
+            {
+               "content": "2018",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "FPTU HN chi gần 100 tỷ mua vacxin tiêm miễn phí cho toàn bộ học sinh, sinh viên và giảng viên vào thời gian nào?",
+         "answers": [
+            {
+               "content": "19/12/2020",
+               "isCorrect": false
+            },
+            {
+               "content": "19/02/2021",
+               "isCorrect": true
+            },
+            {
+               "content": "07/07/2020",
+               "isCorrect": false
+            },
+            {
+               "content": "21/7/2021",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "Hiệu trưởng trường FPT tên là?",
+         "answers": [
+            {
+               "content": "Nguyễn Văn Thành",
+               "isCorrect": false
+            },
+            {
+               "content": "Nguyễn Khắc Thành",
+               "isCorrect": true
+            },
+            {
+               "content": "Nguyễn Khắc Hoàng",
+               "isCorrect": false
+            },
+            {
+               "content": "Nguyễn Việt Thành",
+               "isCorrect": false
+            }
+         ]
+      },
+      {
+         "content": "ĐH FPT có mấy cơ sở?",
+         "answers": [
+            {
+               "content": "3",
+               "isCorrect": false
+            },
+            {
+               "content": "5",
+               "isCorrect": true
+            },
+            {
+               "content": "4",
+               "isCorrect": false
+            },
+            {
+               "content": "6",
+               "isCorrect": false
+            }
+         ]
       }
-
    ]
 }
+

@@ -93,6 +93,7 @@ export class Lv3 extends Phaser.Scene {
       this.maze = this.map.createLayer('maze', terrain);
       this.questionLayer = this.map.createLayer('chest', chest);
       this.keyLayer = this.map.createLayer('key', key);
+      this.itemLayer = this.map.createLayer('item', chest);
 
       this.keyLayer.visible = false;
    }
@@ -102,9 +103,24 @@ export class Lv3 extends Phaser.Scene {
       this.questionLayer.setCollisionByProperty({collides: true});
       this.keyLayer.setCollisionByProperty({collides: true});
       this.maze.setCollisionByProperty({collides: true});
+      this.itemLayer.setCollisionByProperty({collides: true});
 
       this.physics.add.collider(this.player, this.groundLayer);
-      this.physics.add.collider(this.player, this.maze);
+      var mazecollider = this.physics.add.collider(this.player, this.maze);
+
+      this.physics.add.collider(this.player, this.itemLayer, (player, item) => {
+         this.scene.launch('Mystery', 
+         {
+            myCam: this.myCam,
+            cameras: this.cameras,
+            player: this.player,
+            map: this.map,
+            layer: this.itemLayer,
+            chest: item,
+            maze: this.maze,
+            collider: mazecollider,
+         }, this);
+      }, null, this);
       
       this.physics.add.collider(this.girl, this.questionLayer);
       this.physics.add.collider(this.girl, this.groundLayer);
@@ -166,19 +182,6 @@ export class Lv3 extends Phaser.Scene {
    }
 
    createVirus() {
-      // this.virus = this.physics.add.sprite(64 + 16, 64 + 48, 'virus');
-      // this.virus.play('move');
-
-      // this.virus.setBounce(1);
-
-      // this.physics.add.collider(this.virus, this.maze);
-      
-      // this.physics.add.collider(this.player, this.virus, (player, virus) => {
-      //    this.hurtPlayer(player);
-      //    this.move(virus);
-      // });
-
-      // this.move(this.virus);
 
       var spawn = [
          {
@@ -321,7 +324,7 @@ export class Lv3 extends Phaser.Scene {
          }
          this.player.setVelocity(x, y);
       }
-      
+
       if (this.game.registry.get('curQuestion') == this.game.registry.get('totalChest')) {
          this.keyLayer.visible = true;
          this.physics.add.collider(

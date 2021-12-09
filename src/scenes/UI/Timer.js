@@ -40,7 +40,7 @@ export class Timer extends Phaser.Scene {
       this.initialTime -= 1; // One second
       const penalty = this.game.registry.get('penalty');
 
-      if (penalty) {
+      if (penalty != 0) {
          this.initialTime -= penalty;
          this.game.registry.set('penalty', 0);
       }
