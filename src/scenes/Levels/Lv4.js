@@ -75,6 +75,7 @@ export class Lv4 extends Phaser.Scene {
 
       this.player.active = true;
       this.haveKey = false;
+      this.player.speed = 120;
 
       this.myCam = this.cameras.main;
       this.myCam.startFollow(this.player);
@@ -193,7 +194,7 @@ export class Lv4 extends Phaser.Scene {
          {
             x: 30,
             y: 320,
-            vX: 70,  
+            vX: 50,  
             vY: 0  
          }, 
          {
@@ -250,7 +251,7 @@ export class Lv4 extends Phaser.Scene {
    update() {
       // movement
       var x = 0, y = 0;
-      const speed = 120;
+      var speed = this.player.speed;
       if ( (this.cursors["up"].isDown || this.cursors["w"].isDown) && this.player.active) {
          this.player.play("up");
          y -= speed;

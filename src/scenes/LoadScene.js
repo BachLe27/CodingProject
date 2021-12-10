@@ -41,7 +41,7 @@ export class LoadScene extends Phaser.Scene {
    create() {
       this.game.registry.set('score', 0);
       
-      this.scene.start('Lv1');
+      this.scene.start('Lv3');
 
       this.anims.create({
          key: "move", 
