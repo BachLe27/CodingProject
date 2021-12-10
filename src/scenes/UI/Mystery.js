@@ -340,41 +340,59 @@ export class Mystery extends Phaser.Scene {
          this.replaceChest(this.chest);
          if (this.game.registry.get('sound')) this.sound.play('play');
 
-         var random = this.getRndInteger(1, 11);
-      
+         var random = this.getRndInteger(1, 27);
+         // console.log(random);
+
          switch (random) {
             case 1:
+            case 11:
+            case 19: 
+            case 20:
                this.zoomUp(); // Bị zoom 45s
                break;
-            case 2: 
+            case 2:
+            case 12: 
                this.speedUp(); // Tăng tốc độ trong 35s
                break;
             case 3: 
                this.breakWall(); // Đi xuyên tường 30s
-               break;
-            case 4: 
+               break
+            case 4:
+            case 13: 
+            case 21: 
                this.speedDown(); // giảm tốc độ 35s
                break;
-            case 5: 
+            case 5:
+            case 14:
+            case 22: 
                this.resetPlayer(); // Về vị trí spawn
                break;
             case 6:
                this.nextLevel(); // Nhảy level
                break;
             case 7:
+            case 15:
+            case 23:
                this.gameover(); // Game Over
                break;
-            case 8: 
+            case 8:
+            case 16:
+            case 24: 
                this.moreTime(); // thêm thời gian
                break;
-            case 9: 
+            case 9:
+            case 17:
+            case 25: 
                this.lessTime(); // Trừ thời gian
                break;
             case 10:
+            case 26:
                this.haveKey(); // Có chìa khoá
                break;
-            case 11: 
-               this.zoomDown();
+            case 11:
+            case 18:
+            case 27: 
+                this.zoomDown();
                break;
             default:
                break;
