@@ -25,10 +25,10 @@ export class LastScene extends Phaser.Scene {
 
    create() {
       var { width, height } = this.sys.game.canvas;
+      this.bg = this.add.image(800/2, 600/2, 'game-bg').setScale(1, 0.9);
+      var scoreboard = this.add.image(800/2, 600/2 - 5, 'scoreboard');
 
-      var scoreboard = this.add.image(800/2, 600/2, 'scoreboard');
-
-      var btn = this.add.image(345, 375, 'ok').setOrigin(0, 0);
+      var btn = this.add.image(315, 375, 'ok').setOrigin(0, 0);
       btn.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
 
       // Sau khi luu ten

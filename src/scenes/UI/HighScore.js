@@ -9,9 +9,9 @@ export class HighScore extends Phaser.Scene {
    }
 
    preload() {
-      this.load.image('highscore', './assets/Game/highscore.png');
+      this.load.image('highscore', './assets/Game/highscore1.png');
       this.load.image('close', './assets/MainMenu/image/close.png');
-      this.load.image('tryagain', './assets/Game/tryagain.png');
+      this.load.image('tryagain', './assets/Game/tryagain1.png');
    }
 
    formatTime(seconds){
@@ -26,6 +26,7 @@ export class HighScore extends Phaser.Scene {
    }
 
    create() {
+      this.bg = this.add.image(800/2, 600/2, 'game-bg').setScale(1, 0.9);
       this.add.image(400, 300, 'highscore').setScale(0.5);
       
       const close = this.add.image(600, 100, 'close').setOrigin(0,0).setScale(0.25); 
@@ -39,7 +40,7 @@ export class HighScore extends Phaser.Scene {
          close.setVisible(false);
          close.setInteractive(false);
          
-         this.tryagain = this.add.image(400, 555, 'tryagain').setScale(0.3);
+         this.tryagain = this.add.image(400, 555, 'tryagain');
          this.tryagain.setInteractive({ cursor: 'url(./assets/Game/cursor/Link.cur), pointer'});
          this.tryagain.on("pointerup", () => {
             location.reload();
@@ -54,7 +55,6 @@ export class HighScore extends Phaser.Scene {
       for (let i = 0; i < Math.min(5, highscore.player.length); i++) {
          this.add.text(180, 180 + 68 * i, highscore.player[i].name, format);
          this.add.text(500, 180 + 68 * i, this.formatTime(highscore.player[i].score), format);
-        
       }
    }
 

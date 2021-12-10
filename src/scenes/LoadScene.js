@@ -8,6 +8,7 @@ export class LoadScene extends Phaser.Scene {
       this.load.image('terrain-img', './assets/Game/terrain_atlas.png');
       this.load.image("chest-img", "./assets/Game/chest.png");
       this.load.image("frame", "./assets/Game/frame.png");
+      this.load.image("frame2", "./assets/Game/frame2.png");
       this.load.image("key-img", "./assets/Game/key.png");
       this.load.image("btn", "./assets/Game/blue_button.png");
       this.load.image("game-bg", "./assets/Game/covid.jpg");

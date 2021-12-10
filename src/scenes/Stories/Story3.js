@@ -25,10 +25,10 @@ export class Story3 extends Phaser.Scene {
          "Vân đã tới nhà Nam, 1 người bạn cũ, để nhờ tới sự giúp đỡ. Nam được mệnh danh là nhà bác học điên với những công trình nghiên cứu ảo ma và phát ngôn gây sốc. Tuy vậy, Vân vẫn biết và tin tưởng rằng Nam thực sự giỏi và chắc chắn sẽ giúp được mình....",
       ]
 
-      this.image = this.add.image(width/2, height/2, '3-1');
+      this.image = this.add.image(width/2, height/2 - 20, '3-1');
 
       this.format = { 
-         font: "bold 20px Arial", fill: "#FBFF00" , align: 'center', 
+         font: "bold 20px Arial", fill: "#ffffff" , align: 'center', 
          wordWrap: { width: 580, useAdvancedWrap: true },
          stroke: "#000000", strokeThickness: 4,
       }  
@@ -64,12 +64,12 @@ export class Story3 extends Phaser.Scene {
       if (this.image2 != undefined) this.image2.destroy();
 
       if (this.cnt == 2 || this.cnt == 4) {
-         this.image = this.add.image(width/2 - 150, height/2, `3-${this.cnt}`);
+         this.image = this.add.image(width/2 - 150, height/2, `3-${this.cnt}`).setScale(1, 0.6);
          this.cnt++;
-         this.image2 = this.add.image(width/2 + 130, height/2, `3-${this.cnt}`);
+         this.image2 = this.add.image(width/2 + 130, height/2, `3-${this.cnt}`).setScale(1, 0.6);
       }
       else {
-         this.image = this.add.image(width/2, height/2, `3-${this.cnt}`);
+         this.image = this.add.image(width/2, height/2, `3-${this.cnt}`).setScale(1, 0.8);
       }
 
       this.text.destroy();

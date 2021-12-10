@@ -32,7 +32,7 @@ export class Story1 extends Phaser.Scene {
       this.cnt = 1;
 
       this.format = { 
-         font: "bold 20px Arial", fill: "#FBFF00" , align: 'center', 
+         font: "bold 20px Arial", fill: "#ffffff" , align: 'center', 
          wordWrap: { width: 580, useAdvancedWrap: true },
          stroke: "#000000", strokeThickness: 4,
       }  
@@ -67,12 +67,12 @@ export class Story1 extends Phaser.Scene {
       if (this.image2 != undefined) this.image2.destroy();
 
       if (this.cnt == 4 || this.cnt == 6) {
-         this.image = this.add.image(width/2 - 150, height/2, `${this.cnt}`).setScale(0.8);
+         this.image = this.add.image(width/2 - 150, height/2, `${this.cnt}`).setScale(0.8, 0.7);
          this.cnt++;
-         this.image2 = this.add.image(width/2 + 130, height/2, `${this.cnt}`).setScale(0.8);
+         this.image2 = this.add.image(width/2 + 130, height/2, `${this.cnt}`).setScale(0.8, 0.7);
       }
       else {
-         this.image = this.add.image(width/2, height/2, `${this.cnt}`);
+         this.image = this.add.image(width/2, height/2, `${this.cnt}`).setScale(1, 0.7);
       }
 
       this.text.destroy();

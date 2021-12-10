@@ -27,10 +27,10 @@ export class Story2 extends Phaser.Scene {
          "Lần này, Vân yêu cầu chỉ 1 mình cô làm việc, có lẽ vì tổn thương mất đồng đội của cô vẫn chưa nguôi..."
       ]
 
-      this.image = this.add.image(width/2, height/2, '2-1');
+      this.image = this.add.image(width/2, height/2, '2-1').setScale(1, 0.8);
 
       this.format = { 
-         font: "bold 20px Arial", fill: "#FBFF00" , align: 'center', 
+         font: "bold 20px Arial", fill: "#ffffff" , align: 'center', 
          wordWrap: { width: 580, useAdvancedWrap: true },
          stroke: "#000000", strokeThickness: 4,
       }  
@@ -41,7 +41,7 @@ export class Story2 extends Phaser.Scene {
       
       this.tweens.add({
          targets: this.text,
-         y: 480,
+         y: 500,
          duration: 1000,
          ease: 'Linear',
       })
@@ -63,7 +63,7 @@ export class Story2 extends Phaser.Scene {
       }
       this.image.destroy();
       
-      this.image = this.add.image(width/2, height/2, `2-${this.cnt}`);
+      this.image = this.add.image(width/2, height/2, `2-${this.cnt}`).setScale(1, 0.8);
 
       this.text.destroy();
 
@@ -71,7 +71,7 @@ export class Story2 extends Phaser.Scene {
       
       this.tweens.add({
          targets: this.text,
-         y: 480,
+         y: 500,
          duration: 1000,
          // ease: 'Linear',
       })

@@ -11,6 +11,7 @@ export class Story5 extends Phaser.Scene {
    preload() {      
       this.load.image('end-1','./assets/Story/End/1.png');
       this.load.image('end-2','./assets/Story/End/2.png');
+      this.load.audio('bang', './assets/Game/audio/shot.wav')
    }
 
    create() {
@@ -21,10 +22,10 @@ export class Story5 extends Phaser.Scene {
          "Vân không nhiều lời, trực tiếp bắn xuyên trái tim hắn. Cởi bỏ lớp mặt nạ, cô mới nhận ra đó là Nam, người yêu cô. Hóa ra, Nam đúng là nhà bác học điên thật :3. Cô đi ra chỗ chiếc két sắt chưa thuốc giải của con virus cô căm thù bấy lâu mà trong lòng cô thì nặng trĩu...", "Cuối cùng, thế giới cũng bình yên trở lại, chỉ có trái tim Vân là tan vỡ…💔"
       ]
 
-      this.image = this.add.image(width/2, height/2, 'end-1');
+      this.image = this.add.image(width/2, height/2, 'end-1').setScale(0.8);
 
       this.format = { 
-         font: "bold 20px Arial", fill: "#FBFF00" , align: 'center', 
+         font: "bold 20px Arial", fill: "#ffffff" , align: 'center', 
          wordWrap: { width: 580, useAdvancedWrap: true },
          stroke: "#000000", strokeThickness: 4,
       }  
@@ -35,16 +36,11 @@ export class Story5 extends Phaser.Scene {
       
       this.tweens.add({
          targets: this.text,
-         y: 400,
+         y: 450,
          duration: 1000,
          ease: 'Linear',
       })
       
-      this.add.text(800 - 130, 570, "Click để tiếp tục...", {font: "14px Arial"});
-
-      this.spacebar = this.input.keyboard.addKey('space');
-      
-
       this.input.on('pointerdown', () => this.next(), this)
    }
 
@@ -76,15 +72,17 @@ export class Story5 extends Phaser.Scene {
       else {
          this.image.destroy();
       
-         this.image = this.add.image(width/2, height/2, `end-${this.cnt}`);
+         this.image = this.add.image(width/2, height/2, `end-${this.cnt}`).setScale(0.8);
 
          this.text.destroy();
-
+         
          this.text = this.add.text(120, 560, this.content[this.cnt-1], this.format);
          
+         this.sound.play('bang');
+
          this.tweens.add({
             targets: this.text,
-            y: 400,
+            y: 450,
             duration: 1000,
             // ease: 'Linear',
          })
@@ -94,9 +92,9 @@ export class Story5 extends Phaser.Scene {
 
    update() {
 
-      if (this.spacebar.isDown) {
-         this.scene.start('LastScene', {score: this.score}, this);
-      }
+      // if (this.spacebar.isDown) {
+      //    this.scene.start('LastScene', {score: this.score}, this);
+      // }
       
    }
 }

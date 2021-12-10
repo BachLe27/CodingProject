@@ -11,8 +11,8 @@ export class MainMenu extends Phaser.Scene {
       this.load.image('choose', './assets/MainMenu/image/arrow.png');
       this.load.image("bg", "./assets/MainMenu/image/covid.jpg");
       this.load.audio("play", "./assets/MainMenu/audio/play.wav");
-      this.load.image('scoreboard', './assets/Game/scoreboard.png');
-      this.load.image('ok', './assets/Game/oke.png');
+      this.load.image('scoreboard', './assets/Game/scoreboard1.png');
+      this.load.image('ok', './assets/Game/oke1.png');
    }
 
    create() {

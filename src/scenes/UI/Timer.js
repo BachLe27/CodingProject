@@ -12,11 +12,11 @@ export class Timer extends Phaser.Scene {
       this.running = this.game.registry.get('running');
 
       this.format = {
-         font: "20px", fill: "#ffffff", 
-         stroke: "#000000", strokeThickness: 2,
+         font: "bold 20px Arial", fill: "#ffffff", 
+         stroke: "#000000", strokeThickness: 4,
       }
 
-      this.text = this.add.text(32, 550, 'Đếm ngược: ' + this.formatTime(this.initialTime), this.format);
+      this.text = this.add.text(32, 550, "Time: " + this.formatTime(this.initialTime), this.format);
 
       // Each 1000 ms call onEvent
 
@@ -55,7 +55,7 @@ export class Timer extends Phaser.Scene {
          this.player.active = false;
          this.scene.start('GameOver', {noti: "Bạn đã quá chậm, đại dịch đã bùng nổ và không còn gì có thể ngăn chặn !!"}, this);
       }
-      this.text.setText('Đếm ngược: ' + this.formatTime(this.initialTime));
+      this.text.setText("Time: " + this.formatTime(this.initialTime));
    }
 
    update() {

@@ -17,10 +17,10 @@ export class Congrats extends Phaser.Scene {
 
       this.player.active = false;
       
-      const notiFormat = { font: 'bold 25px Arial', fill: 'black', align: 'center', 
+      const notiFormat = { font: 'bold 25px Arial', fill: 'white', align: 'center', 
          wordWrap: { width: 300, useAdvancedWrap: true } 
       };
-      const frame = this.add.image(800 / 2, 600 / 2, 'frame');
+      const frame = this.add.image(800 / 2, 600 / 2, 'frame2').setScale(0.4);
       const noti = [
          "Bạn đã tìm được vaccine chống virus", 
          "Bạn đã tìm được kháng thể chống lại virus",
@@ -28,10 +28,10 @@ export class Congrats extends Phaser.Scene {
          "Bạn đã tìm được tung tích của kẻ tạo ra virus..." 
       ];
 
-      const notiText = this.add.text(frame.x - frame.width/3, frame.y - frame.height/3 + 3, noti[this.level - 1], notiFormat);
+      const notiText = this.add.text(frame.x - 140, frame.y - 30, noti[this.level - 1], notiFormat);
       
-      const btn = this.add.image(460, 355, 'btn').setScale(0.6).setOrigin(0, 0);
-      const btnText = this.add.text(485, 356, 'Tiếp tục', {
+      const btn = this.add.image(480, 395, 'btn').setScale(0.6).setOrigin(0, 0);
+      const btnText = this.add.text(505, 396, 'Tiếp tục', {
          font: 'bold 16px Arial', align: 'center',
          stroke: "#000000", strokeThickness: 4,
       });

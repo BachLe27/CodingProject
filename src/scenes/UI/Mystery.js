@@ -109,6 +109,22 @@ export class Mystery extends Phaser.Scene {
    }
 
    speedUp() {
+      const noti = "Helikopter Helikopter!";
+      const notiFormat = { font: 'Bold 25px Arial', fill: 'white', align: 'left', 
+         wordWrap: { width: 200, useAdvancedWrap: true } 
+      };
+
+      const notiText = this.add.text(800/2 - 50, 600/2 - 50, noti, notiFormat);
+      this.tweens.add({
+         targets: notiText, 
+         y: notiText.y - 25,
+         duration: 1200,
+         onComplete: function(){
+            notiText.destroy();
+         },   
+         onCompleteScope: this
+      })
+
       this.tweens.add({
          targets: this.player,
          speed: this.player.speed * 3.2,
@@ -141,6 +157,23 @@ export class Mystery extends Phaser.Scene {
    }
 
    speedDown() {
+
+      const noti = "Helikopter Helikopter!";
+      const notiFormat = { font: 'Bold 25px Arial', fill: 'white', align: 'left', 
+         wordWrap: { width: 200, useAdvancedWrap: true } 
+      };
+
+      const notiText = this.add.text(800/2 - 50, 600/2 - 50, noti, notiFormat);
+      this.tweens.add({
+         targets: notiText, 
+         y: notiText.y - 25,
+         duration: 1200,
+         onComplete: function(){
+            notiText.destroy();
+         },   
+         onCompleteScope: this
+      })
+
       this.tweens.add({
          targets: this.player,
          speed: this.player.speed * 0.5,
@@ -161,12 +194,28 @@ export class Mystery extends Phaser.Scene {
    breakWall() {
 
       // var collider = this.physics.add.collider(this.player, this.maze)
+      const noti = "Đi xuyên tường";
+      const notiFormat = { font: 'Bold 25px Arial', fill: 'white', align: 'left', 
+         wordWrap: { width: 200, useAdvancedWrap: true } 
+      };
+
+      const notiText = this.add.text(800/2 - 50, 600/2 - 50, noti, notiFormat);
+      this.tweens.add({
+         targets: notiText, 
+         y: notiText.y - 25,
+         duration: 1200,
+         onComplete: function(){
+            notiText.destroy();
+         },   
+         onCompleteScope: this
+      })
+
       this.collider.active = false;
       this.tweens.add({
          targets: this.collider,
          active: false,
          ease: 'Power1',
-         duration: 30000,
+         duration: 20000,
          repeat: 0,
          onStart: function() {
             this.player.alpha = 0.6;
@@ -291,8 +340,7 @@ export class Mystery extends Phaser.Scene {
          this.replaceChest(this.chest);
          if (this.game.registry.get('sound')) this.sound.play('play');
 
-         var random = this.getRndInteger(1, 10);
-         // random = 10;
+         var random = this.getRndInteger(1, 11);
       
          switch (random) {
             case 1:
